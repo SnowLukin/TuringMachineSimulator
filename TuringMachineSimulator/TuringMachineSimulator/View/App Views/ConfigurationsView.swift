@@ -58,7 +58,7 @@ extension ConfigurationsView {
     private var customCell: some View {
         VStack {
             customCellButtonView(
-                "State \(0)",
+                "State \(algorithm.wrappedStates.first(where: { $0.isStarting })?.wrappedID ?? 0)",
                 destination: AnyView(StartStateListView(algorithm: algorithm))
             )
         }.padding()
