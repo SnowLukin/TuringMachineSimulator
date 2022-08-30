@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21C52" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Algorithm" representedClassName="Algorithm" syncable="YES">
+        <attribute name="algDescription" optional="YES" attributeType="String"/>
+        <attribute name="creationDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="editDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="pinned" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <relationship name="folder" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Folder" inverseName="algorithms" inverseEntity="Folder"/>
+        <relationship name="states" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="StateQ" inverseName="algorithm" inverseEntity="StateQ"/>
+        <relationship name="tapes" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Tape" inverseName="algorithm" inverseEntity="Tape"/>
+    </entity>
+    <entity name="Combination" representedClassName="Combination" syncable="YES">
+        <attribute name="character" optional="YES" attributeType="String"/>
+        <attribute name="direction" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="toCharacter" optional="YES" attributeType="String"/>
+        <relationship name="option" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Option" inverseName="combinations" inverseEntity="Option"/>
+    </entity>
+    <entity name="Folder" representedClassName="Folder" syncable="YES">
+        <attribute name="name" attributeType="String"/>
+        <relationship name="algorithms" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Algorithm" inverseName="folder" inverseEntity="Algorithm"/>
+        <relationship name="parentFolder" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Folder" inverseName="subFolders" inverseEntity="Folder"/>
+        <relationship name="subFolders" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Folder" inverseName="parentFolder" inverseEntity="Folder"/>
+    </entity>
+    <entity name="Option" representedClassName="Option" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="combinations" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Combination" inverseName="option" inverseEntity="Combination"/>
+        <relationship name="state" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="StateQ" inverseName="options" inverseEntity="StateQ"/>
+        <relationship name="toState" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="StateQ" inverseName="fromOptions" inverseEntity="StateQ"/>
+    </entity>
+    <entity name="StateQ" representedClassName="StateQ" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="isForReset" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="isStarting" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <relationship name="algorithm" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Algorithm" inverseName="states" inverseEntity="Algorithm"/>
+        <relationship name="fromOptions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Option" inverseName="toState" inverseEntity="Option"/>
+        <relationship name="options" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Option" inverseName="state" inverseEntity="Option"/>
+    </entity>
+    <entity name="Tape" representedClassName="Tape" syncable="YES">
+        <attribute name="alphabet" optional="YES" attributeType="String"/>
+        <attribute name="headIndex" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="input" optional="YES" attributeType="String"/>
+        <relationship name="algorithm" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Algorithm" inverseName="tapes" inverseEntity="Algorithm"/>
+        <relationship name="components" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="TapeComponent" inverseName="tape" inverseEntity="TapeComponent"/>
+    </entity>
+    <entity name="TapeComponent" representedClassName="TapeComponent" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="value" optional="YES" attributeType="String"/>
+        <relationship name="tape" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Tape" inverseName="components" inverseEntity="Tape"/>
+    </entity>
+    <elements>
+        <element name="Folder" positionX="-63" positionY="-18" width="128" height="89"/>
+        <element name="Algorithm" positionX="-54" positionY="27" width="128" height="149"/>
+        <element name="Tape" positionX="-45" positionY="36" width="128" height="119"/>
+        <element name="StateQ" positionX="-36" positionY="72" width="128" height="119"/>
+        <element name="Option" positionX="-27" positionY="81" width="128" height="89"/>
+        <element name="Combination" positionX="-18" positionY="90" width="128" height="104"/>
+        <element name="TapeComponent" positionX="9" positionY="135" width="128" height="74"/>
+    </elements>
+</model>
