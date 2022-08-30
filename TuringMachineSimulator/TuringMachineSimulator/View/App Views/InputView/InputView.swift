@@ -81,6 +81,5 @@ extension InputView {
                     text = tape.wrappedInput
                 }
             }
-            .modifier(RemoveTextButtonTextField(text: $text))
     }
 }

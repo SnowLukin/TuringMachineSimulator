@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D7544BA128BE3980003DFB12 /* Folder+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7544B9F28BE3980003DFB12 /* Folder+CoreDataClass.swift */; };
 		D7544BA228BE3980003DFB12 /* Folder+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7544BA028BE3980003DFB12 /* Folder+CoreDataProperties.swift */; };
+		D7544BA428BE6657003DFB12 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7544BA328BE6657003DFB12 /* LogoView.swift */; };
 		D7B0348228BCE21800F3B135 /* AlgorithmInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B0348128BCE21800F3B135 /* AlgorithmInfoView.swift */; };
 		D7B0348528BCEF7300F3B135 /* AlgorithmShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B0348428BCEF7300F3B135 /* AlgorithmShare.swift */; };
 		D7B0348928BCEF7F00F3B135 /* TapeShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B0348828BCEF7F00F3B135 /* TapeShare.swift */; };
@@ -40,7 +41,6 @@
 		D7E8A88D28B6472800F40736 /* Algorithm+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E8A87F28B6472800F40736 /* Algorithm+CoreDataProperties.swift */; };
 		D7E8A88E28B6472800F40736 /* Option+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E8A88028B6472800F40736 /* Option+CoreDataClass.swift */; };
 		D7E8A88F28B6472800F40736 /* Option+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E8A88128B6472800F40736 /* Option+CoreDataProperties.swift */; };
-		D7E8A89A28B64F4D00F40736 /* Sidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E8A89928B64F4D00F40736 /* Sidebar.swift */; };
 		D7E8A89E28B6505B00F40736 /* InitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E8A89D28B6505B00F40736 /* InitialView.swift */; };
 		D7E8A8A028B6519B00F40736 /* FolderListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E8A89F28B6519B00F40736 /* FolderListView.swift */; };
 		D7E8A8A228B652A300F40736 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E8A8A128B652A300F40736 /* SampleData.swift */; };
@@ -66,7 +66,6 @@
 		D7E8A8D928B793D500F40736 /* PlayStackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E8A8D828B793D500F40736 /* PlayStackViewModel.swift */; };
 		D7E8A8DB28B795EC00F40736 /* NoTapColorButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E8A8DA28B795EC00F40736 /* NoTapColorButtonStyle.swift */; };
 		D7E8A8DD28B7BE9400F40736 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E8A8DC28B7BE9300F40736 /* InputView.swift */; };
-		D7E8A8DF28B7BF1200F40736 /* RemoveTextButtonTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E8A8DE28B7BF1200F40736 /* RemoveTextButtonTextField.swift */; };
 		D7E8A8E128B7C55B00F40736 /* InputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E8A8E028B7C55B00F40736 /* InputViewModel.swift */; };
 		D7E8A8E428B7C8B500F40736 /* TapeConfigViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E8A8E328B7C8B500F40736 /* TapeConfigViewModel.swift */; };
 		D7E8A8E728B7CD4900F40736 /* TapesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E8A8E628B7CD4900F40736 /* TapesViewModel.swift */; };
@@ -76,6 +75,7 @@
 /* Begin PBXFileReference section */
 		D7544B9F28BE3980003DFB12 /* Folder+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Folder+CoreDataClass.swift"; sourceTree = "<group>"; };
 		D7544BA028BE3980003DFB12 /* Folder+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Folder+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D7544BA328BE6657003DFB12 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 		D7B0348128BCE21800F3B135 /* AlgorithmInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmInfoView.swift; sourceTree = "<group>"; };
 		D7B0348428BCEF7300F3B135 /* AlgorithmShare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmShare.swift; sourceTree = "<group>"; };
 		D7B0348828BCEF7F00F3B135 /* TapeShare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapeShare.swift; sourceTree = "<group>"; };
@@ -109,7 +109,6 @@
 		D7E8A87F28B6472800F40736 /* Algorithm+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Algorithm+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D7E8A88028B6472800F40736 /* Option+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Option+CoreDataClass.swift"; sourceTree = "<group>"; };
 		D7E8A88128B6472800F40736 /* Option+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Option+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		D7E8A89928B64F4D00F40736 /* Sidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sidebar.swift; sourceTree = "<group>"; };
 		D7E8A89D28B6505B00F40736 /* InitialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialView.swift; sourceTree = "<group>"; };
 		D7E8A89F28B6519B00F40736 /* FolderListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderListView.swift; sourceTree = "<group>"; };
 		D7E8A8A128B652A300F40736 /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
@@ -135,7 +134,6 @@
 		D7E8A8D828B793D500F40736 /* PlayStackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayStackViewModel.swift; sourceTree = "<group>"; };
 		D7E8A8DA28B795EC00F40736 /* NoTapColorButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoTapColorButtonStyle.swift; sourceTree = "<group>"; };
 		D7E8A8DC28B7BE9300F40736 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
-		D7E8A8DE28B7BF1200F40736 /* RemoveTextButtonTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveTextButtonTextField.swift; sourceTree = "<group>"; };
 		D7E8A8E028B7C55B00F40736 /* InputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewModel.swift; sourceTree = "<group>"; };
 		D7E8A8E328B7C8B500F40736 /* TapeConfigViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapeConfigViewModel.swift; sourceTree = "<group>"; };
 		D7E8A8E628B7CD4900F40736 /* TapesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapesViewModel.swift; sourceTree = "<group>"; };
@@ -223,6 +221,7 @@
 				D7B0349028BCF37400F3B135 /* Info.plist */,
 				D7E8A85F28B56F2200F40736 /* TuringMachineSimulatorApp.swift */,
 				D7E8A86128B56F2200F40736 /* ContentView.swift */,
+				D7544BA328BE6657003DFB12 /* LogoView.swift */,
 				D7B0349128BCF41500F3B135 /* DocumentManager.swift */,
 				D7B0349828BD483700F3B135 /* Extensions */,
 				D7E8A87228B6469200F40736 /* Model */,
@@ -334,8 +333,6 @@
 			isa = PBXGroup;
 			children = (
 				D7E8A8DA28B795EC00F40736 /* NoTapColorButtonStyle.swift */,
-				D7E8A8DE28B7BF1200F40736 /* RemoveTextButtonTextField.swift */,
-				D7E8A89928B64F4D00F40736 /* Sidebar.swift */,
 				D7F9782628BAEB880062A46B /* CustomAlerts */,
 				D7E8A89828B64F0E00F40736 /* App Views */,
 			);
@@ -538,10 +535,9 @@
 				D7E8A88A28B6472800F40736 /* Tape+CoreDataClass.swift in Sources */,
 				D7E8A8AF28B6B0FC00F40736 /* AlgorithmView.swift in Sources */,
 				D7B0348228BCE21800F3B135 /* AlgorithmInfoView.swift in Sources */,
-				D7E8A89A28B64F4D00F40736 /* Sidebar.swift in Sources */,
 				D7544BA128BE3980003DFB12 /* Folder+CoreDataClass.swift in Sources */,
 				D7D7C04128B90CF0008849C1 /* StateListViewModel.swift in Sources */,
-				D7E8A8DF28B7BF1200F40736 /* RemoveTextButtonTextField.swift in Sources */,
+				D7544BA428BE6657003DFB12 /* LogoView.swift in Sources */,
 				D7B0348F28BCEF9D00F3B135 /* CombinationShare.swift in Sources */,
 				D7E8A8B328B6B2F300F40736 /* ConfigurationsView.swift in Sources */,
 				D7E8A8E728B7CD4900F40736 /* TapesViewModel.swift in Sources */,
@@ -691,7 +687,6 @@
 				INFOPLIST_FILE = TuringMachineSimulator/Info.plist;
 				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = NO;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -723,7 +718,6 @@
 				INFOPLIST_FILE = TuringMachineSimulator/Info.plist;
 				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = NO;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

@@ -10,7 +10,7 @@ import SwiftUI
 extension UISplitViewController {
     open override func viewDidLoad() {
         super.viewDidLoad()
-//        self.show(.primary)
+        self.show(.primary)
         self.showsSecondaryOnlyButton = true
     }
 }
