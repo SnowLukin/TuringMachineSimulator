@@ -28,22 +28,17 @@ struct InitialView: View {
     
     
     var body: some View {
-        NavigationView {
-            FolderListView()
-            defaultDetailView()
-            defaultSecondaryView()
-        }.navigationViewStyle(.automatic)
-//        if UIDevice.current.userInterfaceIdiom == .phone {
-//            NavigationView {
-//                FolderListView()
-//            }.navigationViewStyle(.stack)
-//        } else {
-//            NavigationView {
-//                FolderListView()
-//                defaultDetailView()
-//                defaultSecondaryView()
-//            }.navigationViewStyle(.automatic)
-//        }
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            NavigationView {
+                FolderListView()
+            }.navigationViewStyle(.stack)
+        } else {
+            NavigationView {
+                FolderListView()
+                defaultDetailView()
+                defaultSecondaryView()
+            }.navigationViewStyle(.columns)
+        }
     }
 }
 

@@ -2,7 +2,7 @@
 //  Folder+CoreDataProperties.swift
 //  TuringMachineSimulator
 //
-//  Created by Snow Lukin on 24.08.2022.
+//  Created by Snow Lukin on 30.08.2022.
 //
 //
 
@@ -17,10 +17,8 @@ extension Folder {
     }
 
     @NSManaged public var name: String?
-    @NSManaged public var parentFolder: Folder?
-    @NSManaged public var subFolders: NSSet?
     @NSManaged public var algorithms: NSSet?
-    
+
     public var wrappedName: String {
         return name ?? "New Folder"
     }
@@ -31,29 +29,6 @@ extension Folder {
             $0.wrappedName < $1.wrappedName
         }
     }
-    
-    public var wrappedSubFolders: [Folder] {
-        let subFolderSet = subFolders as? Set<Folder> ?? []
-        return Array(subFolderSet)
-    }
-
-}
-
-// MARK: Generated accessors for subFolders
-extension Folder {
-
-    @objc(addSubFoldersObject:)
-    @NSManaged public func addToSubFolders(_ value: Folder)
-
-    @objc(removeSubFoldersObject:)
-    @NSManaged public func removeFromSubFolders(_ value: Folder)
-
-    @objc(addSubFolders:)
-    @NSManaged public func addToSubFolders(_ values: NSSet)
-
-    @objc(removeSubFolders:)
-    @NSManaged public func removeFromSubFolders(_ values: NSSet)
-
 }
 
 // MARK: Generated accessors for algorithms

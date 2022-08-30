@@ -2,7 +2,7 @@
 //  Folder+CoreDataClass.swift
 //  TuringMachineSimulator
 //
-//  Created by Snow Lukin on 24.08.2022.
+//  Created by Snow Lukin on 30.08.2022.
 //
 //
 

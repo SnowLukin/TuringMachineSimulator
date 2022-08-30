@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D7544BA128BE3980003DFB12 /* Folder+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7544B9F28BE3980003DFB12 /* Folder+CoreDataClass.swift */; };
+		D7544BA228BE3980003DFB12 /* Folder+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7544BA028BE3980003DFB12 /* Folder+CoreDataProperties.swift */; };
 		D7B0348228BCE21800F3B135 /* AlgorithmInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B0348128BCE21800F3B135 /* AlgorithmInfoView.swift */; };
 		D7B0348528BCEF7300F3B135 /* AlgorithmShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B0348428BCEF7300F3B135 /* AlgorithmShare.swift */; };
 		D7B0348928BCEF7F00F3B135 /* TapeShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B0348828BCEF7F00F3B135 /* TapeShare.swift */; };
@@ -32,8 +34,6 @@
 		D7E8A88528B6472800F40736 /* TapeComponent+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E8A87728B6472800F40736 /* TapeComponent+CoreDataProperties.swift */; };
 		D7E8A88628B6472800F40736 /* StateQ+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E8A87828B6472800F40736 /* StateQ+CoreDataClass.swift */; };
 		D7E8A88728B6472800F40736 /* StateQ+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E8A87928B6472800F40736 /* StateQ+CoreDataProperties.swift */; };
-		D7E8A88828B6472800F40736 /* Folder+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E8A87A28B6472800F40736 /* Folder+CoreDataClass.swift */; };
-		D7E8A88928B6472800F40736 /* Folder+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E8A87B28B6472800F40736 /* Folder+CoreDataProperties.swift */; };
 		D7E8A88A28B6472800F40736 /* Tape+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E8A87C28B6472800F40736 /* Tape+CoreDataClass.swift */; };
 		D7E8A88B28B6472800F40736 /* Tape+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E8A87D28B6472800F40736 /* Tape+CoreDataProperties.swift */; };
 		D7E8A88C28B6472800F40736 /* Algorithm+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E8A87E28B6472800F40736 /* Algorithm+CoreDataClass.swift */; };
@@ -74,6 +74,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D7544B9F28BE3980003DFB12 /* Folder+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Folder+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D7544BA028BE3980003DFB12 /* Folder+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Folder+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D7B0348128BCE21800F3B135 /* AlgorithmInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmInfoView.swift; sourceTree = "<group>"; };
 		D7B0348428BCEF7300F3B135 /* AlgorithmShare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmShare.swift; sourceTree = "<group>"; };
 		D7B0348828BCEF7F00F3B135 /* TapeShare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapeShare.swift; sourceTree = "<group>"; };
@@ -101,8 +103,6 @@
 		D7E8A87728B6472800F40736 /* TapeComponent+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TapeComponent+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D7E8A87828B6472800F40736 /* StateQ+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StateQ+CoreDataClass.swift"; sourceTree = "<group>"; };
 		D7E8A87928B6472800F40736 /* StateQ+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StateQ+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		D7E8A87A28B6472800F40736 /* Folder+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Folder+CoreDataClass.swift"; sourceTree = "<group>"; };
-		D7E8A87B28B6472800F40736 /* Folder+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Folder+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D7E8A87C28B6472800F40736 /* Tape+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tape+CoreDataClass.swift"; sourceTree = "<group>"; };
 		D7E8A87D28B6472800F40736 /* Tape+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tape+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D7E8A87E28B6472800F40736 /* Algorithm+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Algorithm+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -270,8 +270,8 @@
 		D7E8A89028B6473500F40736 /* Folder */ = {
 			isa = PBXGroup;
 			children = (
-				D7E8A87A28B6472800F40736 /* Folder+CoreDataClass.swift */,
-				D7E8A87B28B6472800F40736 /* Folder+CoreDataProperties.swift */,
+				D7544B9F28BE3980003DFB12 /* Folder+CoreDataClass.swift */,
+				D7544BA028BE3980003DFB12 /* Folder+CoreDataProperties.swift */,
 			);
 			path = Folder;
 			sourceTree = "<group>";
@@ -496,9 +496,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7E8A88228B6472800F40736 /* Combination+CoreDataClass.swift in Sources */,
-				D7E8A88928B6472800F40736 /* Folder+CoreDataProperties.swift in Sources */,
 				D7F9782828BAEBB20062A46B /* TransperentCover.swift in Sources */,
 				D7E8A8D028B6C39200F40736 /* CombinationSettingView.swift in Sources */,
+				D7544BA228BE3980003DFB12 /* Folder+CoreDataProperties.swift in Sources */,
 				D7E8A8B928B6B69000F40736 /* TapesView.swift in Sources */,
 				D7E8A88528B6472800F40736 /* TapeComponent+CoreDataProperties.swift in Sources */,
 				D7E8A8E128B7C55B00F40736 /* InputViewModel.swift in Sources */,
@@ -534,12 +534,12 @@
 				D7E8A88D28B6472800F40736 /* Algorithm+CoreDataProperties.swift in Sources */,
 				D7E8A89E28B6505B00F40736 /* InitialView.swift in Sources */,
 				D7B0349228BCF41500F3B135 /* DocumentManager.swift in Sources */,
-				D7E8A88828B6472800F40736 /* Folder+CoreDataClass.swift in Sources */,
 				D7E8A8CE28B6C2FE00F40736 /* CombinationView.swift in Sources */,
 				D7E8A88A28B6472800F40736 /* Tape+CoreDataClass.swift in Sources */,
 				D7E8A8AF28B6B0FC00F40736 /* AlgorithmView.swift in Sources */,
 				D7B0348228BCE21800F3B135 /* AlgorithmInfoView.swift in Sources */,
 				D7E8A89A28B64F4D00F40736 /* Sidebar.swift in Sources */,
+				D7544BA128BE3980003DFB12 /* Folder+CoreDataClass.swift in Sources */,
 				D7D7C04128B90CF0008849C1 /* StateListViewModel.swift in Sources */,
 				D7E8A8DF28B7BF1200F40736 /* RemoveTextButtonTextField.swift in Sources */,
 				D7B0348F28BCEF9D00F3B135 /* CombinationShare.swift in Sources */,
