@@ -76,14 +76,16 @@ struct AlertWithTextField: View {
             .frame(width: 300)
             .background(Color(uiColor: .secondarySystemBackground))
             .cornerRadius(12)
+            .padding(.bottom, focused ? 20 : 0)
         }
         .ignoresSafeArea()
         .transition(.opacity)
-        .onAppear {
-            focused = true
-        }
+//        .onAppear {
+//            focused = true
+//        }
         .task {
             animate(isShown: true)
+            focused = true
         }
     }
 }

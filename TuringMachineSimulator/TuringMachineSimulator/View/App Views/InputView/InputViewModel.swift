@@ -123,10 +123,18 @@ class InputViewModel: ObservableObject {
             // If not possible -> text is empty.
             updateAlphabet(text, for: tape, viewContext: viewContext)
             removeInputCharactersWhichAreNotInAlphabet(for: tape)
+            do {
+                try viewContext.save()
+                print("Alphabet (\(text)) saved successfully.")
+            } catch {
+                print("Failed saving new alphabet.")
+                print(error.localizedDescription)
+            }
             return
         }
+        
         // If last character is a "space". Remove it.
-        if lastCharacter == " " {
+        if lastCharacter == " " || lastCharacter == "_" {
             return
         }  else if !text.contains(lastCharacter) {  // Checking new character already exist
             // if it isn't - add it
@@ -137,7 +145,7 @@ class InputViewModel: ObservableObject {
         
         do {
             try viewContext.save()
-            print("Alphabet saved successfully.")
+            print("Alphabet (\(text)) saved successfully.")
         } catch {
             print("Failed saving new alphabet.")
             print(error.localizedDescription)
@@ -156,25 +164,31 @@ class InputViewModel: ObservableObject {
         guard let lastCharacter = text.popLast() else {
             // If not possible -> text is empty.
             updateInput(text, for: tape)
+            do {
+                try viewContext.save()
+                print("Input (\(text)) saved successfully.")
+            } catch {
+                print("Failed saving new input.")
+                print(error.localizedDescription)
+            }
             return
         }
         
-        // if new character is "space" change it to "_"
-        if lastCharacter == " " {
-            text.append("_")
-            updateInput(text, for: tape)
+        // Return if nothin changed
+        if tape.wrappedInput == text {
             return
         }
+        
         // if there is such character in alphabet - save it
         // otherwise delete it
-        if tape.wrappedAlphabet.contains(lastCharacter) {
+        if tape.wrappedAlphabet.contains(lastCharacter) || lastCharacter == "_" {
             text.append(lastCharacter)
         }
         updateInput(text, for: tape)
         
         do {
             try viewContext.save()
-            print("Input saved successfully.")
+            print("Input (\(text)) saved successfully.")
         } catch {
             print("Failed saving new input.")
             print(error.localizedDescription)

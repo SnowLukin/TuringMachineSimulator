@@ -136,7 +136,7 @@ class TapesViewModel: ObservableObject {
     }
     
     private func addComponents(tape: Tape, viewContext: NSManagedObjectContext) {
-        for index in -200..<201 {
+        for index in -80..<81 {
             let component = TapeComponent(context: viewContext)
             component.id = Int64(index)
             tape.addToComponents(component)

@@ -18,7 +18,7 @@ struct SampleData {
         tape.alphabet = "_abc"
         tape.input = "aabbcc"
         
-        for index in -200..<201 {
+        for index in -80..<81 {
             // MARK: - Component
             let component = TapeComponent(context: context)
             component.id = Int64(index)
@@ -62,18 +62,14 @@ struct SampleData {
         algorithm.pinned = false
         
         algorithm.addToTapes(tape)
-//        print(tape.algorithm?.name ?? "NAAAAN")
-//        tape.algorithm = algorithm
         
         algorithm.addToStates(state)
-//        state.algorithm = algorithm
         
         // MARK: - Folder
         let folder = Folder(context: context)
         folder.name = "Algorithms"
         
         folder.addToAlgorithms(algorithm)
-//        algorithm.folder = folder
         
         // MARK: - Save Context
         do {

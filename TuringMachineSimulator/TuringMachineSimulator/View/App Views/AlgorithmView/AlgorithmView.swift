@@ -22,7 +22,7 @@ struct AlgorithmView: View {
     
     var body: some View {
         ZStack {
-            ScrollView {
+            VStack {
                 ConfigurationsView(algorithm: algorithm, showSettings: $showSettings)
                     .disabled(isChanged)
                     if isChanged {

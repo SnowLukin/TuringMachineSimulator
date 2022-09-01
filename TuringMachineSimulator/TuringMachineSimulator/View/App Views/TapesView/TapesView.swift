@@ -23,13 +23,11 @@ struct TapesView: View {
         .navigationTitle("Tapes")
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
-                Button {
+                Button("Add Tape") {
                     withAnimation {
                         viewModel.addTape(algorithm: algorithm, viewContext: viewContext)
                     }
-                } label: {
-                    Image(systemName: "plus")
-                }
+                }.disabled(algorithm.wrappedTapes.count > 10)
             }
         }
     }

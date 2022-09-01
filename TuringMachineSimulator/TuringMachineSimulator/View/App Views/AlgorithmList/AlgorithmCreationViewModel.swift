@@ -51,7 +51,7 @@ class AlgorithmListViewModel: ObservableObject {
         tape.input = ""
         algorithm.addToTapes(tape)
         
-        for index in -200..<201 {
+        for index in -80..<81 {
             // Components
             let component = TapeComponent(context: viewContext)
             component.id = Int64(index)

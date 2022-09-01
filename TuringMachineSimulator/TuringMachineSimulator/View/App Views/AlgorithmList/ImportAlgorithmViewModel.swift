@@ -69,7 +69,7 @@ class ImportAlgorithmViewModel: ObservableObject {
     }
     
     private func addComponents(to tape: Tape, viewContext: NSManagedObjectContext) {
-        for index in -200..<201 {
+        for index in -80..<81 {
             let component = TapeComponent(context: viewContext)
             component.id = Int64(index)
             if (0..<tape.wrappedInput.count).contains(index) {

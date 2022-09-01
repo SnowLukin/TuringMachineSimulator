@@ -24,7 +24,7 @@ struct TapesWorkView: View {
     @ObservedObject var algorithm: Algorithm
     
     var body: some View {
-//        ScrollView {
+        ScrollView {
             ForEach(algorithm.wrappedTapes) { tape in
                 VStack(spacing: 0) {
                     setTapeNameText(tapeID: tape.wrappedID)
@@ -32,7 +32,7 @@ struct TapesWorkView: View {
                         .padding([.leading, .trailing])
                 }
             }
-//        }
+        }
     }
 }
 

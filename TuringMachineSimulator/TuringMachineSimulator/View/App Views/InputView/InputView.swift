@@ -19,6 +19,7 @@ struct InputView: View {
     @Environment(\.managedObjectContext) private var viewContext
     @StateObject private var viewModel = InputViewModel()
     @State private var text = ""
+    @State private var oldText = ""
     
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
@@ -52,34 +53,24 @@ extension InputView {
     @ViewBuilder
     private func textfield() -> some View {
         TextField("", text: $text)
+            .disableAutocorrection(true)
+            .autocapitalization(.none)
             .font(.title3.bold())
             .frame(height: 30)
             .padding(EdgeInsets(top: 0, leading: 12, bottom: 0, trailing: 12))
             .background(Color(uiColor: .secondarySystemBackground))
             .cornerRadius(12)
             .onChange(of: text) { newValue in
+                print(newValue)
                 if purpose == .alphabet {
-                    if newValue.last == " " {
-                        text.removeLast()
-                    }
                     viewModel.setNewAlphabetValue(text, for: tape, viewContext: viewContext)
-                } else {
-                    if newValue.last == " " {
-                        text.removeLast()
-                        text.append("_")
-                    }
-                    viewModel.setNewInputValue(text, for: tape, viewContext: viewContext)
-                }
-            }
-            .onChange(of: tape.alphabet) { _ in
-                if purpose == .alphabet {
                     text = tape.wrappedAlphabet
-                }
-            }
-            .onChange(of: tape.input) { _ in
-                if purpose == .input {
+                } else {
+                    text = newValue.replacingOccurrences(of: " ", with: "_")
+                    viewModel.setNewInputValue(text, for: tape, viewContext: viewContext)
                     text = tape.wrappedInput
                 }
             }
+
     }
 }
