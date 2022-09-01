@@ -71,6 +71,5 @@ extension InputView {
                     text = tape.wrappedInput
                 }
             }
-
     }
 }

@@ -10,16 +10,26 @@ import SwiftUI
 struct CombinationListView: View {
     
     @ObservedObject var state: StateQ
+    @State private var searchedCombination = ""
     
     var body: some View {
-        List(state.wrappedOptions) { option in
+        List(
+            searchedCombination.isEmpty
+            ? state.wrappedOptions
+            : state.wrappedOptions.filter {
+                $0.wrappedCombinations
+                    .map { $0.wrappedCharacter }
+                    .joined(separator: "")
+                    .contains(searchedCombination)
+            }
+        ) { option in
             NavigationLink {
                 CombinationView(option: option)
             } label: {
                 Text("\(option.wrappedCombinations.map { $0.wrappedCharacter }.joined(separator: ""))")
             }
-        }
-        .navigationTitle(state.wrappedOptions.isEmpty ? "Empty" : "State \(state.wrappedID)'s combinations")
+        }.searchable(text: $searchedCombination)
+        .navigationTitle("State \(state.wrappedID)'s combinations")
         .navigationBarTitleDisplayMode(.inline)
     }
 }
