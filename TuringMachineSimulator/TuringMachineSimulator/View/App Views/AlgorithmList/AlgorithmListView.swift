@@ -15,10 +15,8 @@ struct AlgorithmListView: View {
     
     @StateObject private var viewModel = AlgorithmListViewModel()
     @StateObject private var importViewModel = ImportAlgorithmViewModel()
-    @State private var showCreationAlgorithmView = false
     @State private var showImport = false
     @State private var searchedAlgorithm = ""
-    @State private var text = ""
     
     var body: some View {
         ZStack {
@@ -62,24 +60,8 @@ struct AlgorithmListView: View {
                 EditButton()
             }
         }
-        .textfieldAlert(
-            show: $showCreationAlgorithmView,
-            text: $text,
-            title: "New Algorithm",
-            textfieldPlaceholder: "Name"
-        ) {
-            // Cancel action
-        } saveAction: {
-            viewModel.createAlgorithm(
-                text.trimmingCharacters(in: .whitespaces),
-                for: folder,
-                viewContext: viewContext
-            )
-        }
         .overlay(alignment: .bottom) {
-            if !showCreationAlgorithmView {
-                algorithmCreationView()
-            }
+            algorithmCreationView()
         }
         
         .fileImporter(isPresented: $showImport, allowedContentTypes: [.mtm], allowsMultipleSelection: false) { result in
@@ -124,9 +106,19 @@ extension AlgorithmListView {
         HStack {
             Spacer()
             Button {
-                withoutAnimation {
-                    showCreationAlgorithmView.toggle()
-                }
+                alertTextField(
+                    title: "New Algorithm",
+                    message: "Enter a name for this algorithm.",
+                    hintText: "Name",
+                    primaryTitle: "Save", secondaryTitle: "Cancel"
+                ) { newAlgorithmName in
+                    withAnimation {
+                        viewModel.createAlgorithm(
+                            newAlgorithmName.trimmingCharacters(in: .whitespaces),
+                            for: folder, viewContext: viewContext
+                        )
+                    }
+                } secondaryAction: {}
             } label: {
                 Image(systemName: "doc.badge.plus")
                     .font(.title2)

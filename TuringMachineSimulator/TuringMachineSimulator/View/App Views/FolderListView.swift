@@ -35,10 +35,7 @@ struct FolderListView: View {
         animation: .default)
     private var folders: FetchedResults<Folder>
     
-    @State private var showCreationFolderView = false
     @State private var showNameTakenMessage = false
-    
-    @State private var newFolderName = ""
     @State private var searchFolder = ""
     
     var body: some View {
@@ -69,23 +66,15 @@ struct FolderListView: View {
                 }.padding(.horizontal)
             }
         }
-        .textfieldAlert(show: $showCreationFolderView, text: $newFolderName, title: "New Folder", textfieldPlaceholder: "Name", disabledWhenEmpty: true) {
-            // Cancel action
-        } saveAction: {
-            saveFolderAction()
+        .alert("Name is taken", isPresented: $showNameTakenMessage) {
+            Button("OK", role: .cancel) {}
         }
-        .alert(show: $showNameTakenMessage, title: "Name taken",
-               subTitle: "Please choose differrent name", action: {}
-        )
         .overlay(alignment: .bottom) {
-            if !showCreationFolderView && !showNameTakenMessage {
-                addFolderButton()
-            }
+            addFolderButton()
         }
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 EditButton()
-                    .disabled(showCreationFolderView || showNameTakenMessage)
             }
         }
         .navigationTitle("Folders")
@@ -124,8 +113,14 @@ extension FolderListView {
     private func addFolderButton() -> some View {
         HStack {
             Button {
-                withoutAnimation {
-                    showCreationFolderView.toggle()
+                alertTextField(
+                    title: "New Folder",
+                    message: "Enter a name for this folder.",
+                    hintText: "Name",
+                    primaryTitle: "Save", secondaryTitle: "Cancel") { newFolderName in
+                        saveFolderAction(name: newFolderName)
+                } secondaryAction: {
+                    
                 }
             } label: {
                 Image(systemName: "folder.badge.plus")
@@ -141,15 +136,13 @@ extension FolderListView {
         )
     }
     
-    private func saveFolderAction() {
-        var trimmedFolderName = newFolderName.trimmingCharacters(in: .whitespaces)
+    private func saveFolderAction(name: String) {
+        var trimmedFolderName = name.trimmingCharacters(in: .whitespaces)
         if trimmedFolderName == "" {
             trimmedFolderName = "New Folder"
         }
         if folders.map({ $0.wrappedName }).contains(trimmedFolderName) {
-            withoutAnimation {
-                showNameTakenMessage = true
-            }
+            showNameTakenMessage = true
         } else {
             viewModel.createFolder(trimmedFolderName, viewContext: viewContext)
         }
