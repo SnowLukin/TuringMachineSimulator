@@ -46,7 +46,8 @@ struct FolderListView: View {
                     ? folders.map {$0}
                     : folders.filter { $0.wrappedName.contains(searchFolder) }
                 ) { folder in
-                    folderCell(folder).deleteDisabled(folder.wrappedName == "Algorithms")
+                    folderCell(folder)
+                        .deleteDisabled(folder.wrappedName == "Algorithms")
                 }
                 .onDelete(perform: deleteFolders)
             }
@@ -105,6 +106,41 @@ extension FolderListView {
                 Text("\(folder.wrappedAlgorithms.count)")
                     .font(.subheadline)
                     .foregroundColor(.gray)
+            }
+        }
+        .contextMenu {
+            if folder.wrappedName != "Algorithms" {
+                Button {
+                    alertTextField(title: "Rename Folder", message: "", hintText: "", primaryTitle: "Save", secondaryTitle: "Cancel") { newName in
+                        folder.name = newName
+                        do {
+                            try viewContext.save()
+                            print("Folder(s) successfully deleted.")
+                        } catch {
+                            print("Failed deleting folder(s).")
+                            let nsError = error as NSError
+                            print("\(nsError), \(nsError.userInfo)")
+                        }
+                    } secondaryAction: { }
+                } label: {
+                    Label("Rename", systemImage: "pencil")
+                }
+                
+                Button(role: .destructive) {
+                    withAnimation {
+                        viewContext.delete(folder)
+                        do {
+                            try viewContext.save()
+                            print("Folder(s) successfully deleted.")
+                        } catch {
+                            print("Failed deleting folder(s).")
+                            let nsError = error as NSError
+                            print("\(nsError), \(nsError.userInfo)")
+                        }
+                    }
+                } label: {
+                    Label("Delete", systemImage: "trash")
+                }
             }
         }
     }
