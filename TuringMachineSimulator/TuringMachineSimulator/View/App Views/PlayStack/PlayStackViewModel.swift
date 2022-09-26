@@ -53,22 +53,22 @@ class PlayStackViewModel: ObservableObject {
                 print("Error finding component")
                 return
             }
-            
-//            DispatchQueue.main.async {
-//                component.value = currentOption.wrappedCombinations[index].toCharacter
-//            }
             component.value = currentOption.wrappedCombinations[index].toCharacter
             
             switch currentOption.wrappedCombinations[index].wrappedDirection {
             case 0:
                 break
             case 1:
-                DispatchQueue.main.async {
-                    currentTape.headIndex -= 1
+                if currentTape.wrappedHeadIndex != -100 {
+                    DispatchQueue.main.async {
+                        currentTape.headIndex -= 1
+                    }
                 }
             default:
-                DispatchQueue.main.async {
-                    currentTape.headIndex += 1
+                if currentTape.wrappedHeadIndex != 100 {
+                    DispatchQueue.main.async {
+                        currentTape.headIndex += 1
+                    }
                 }
             }
         }
@@ -80,14 +80,6 @@ class PlayStackViewModel: ObservableObject {
             return
         }
         toState.isStarting.toggle()
-//        DispatchQueue.main.async {
-//            startState.isStarting.toggle()
-//            guard let toState = algorithm.wrappedStates.first(where: { $0.wrappedID == currentOption.wrappedID }) else {
-//                print("Error. Couldnt find toState.")
-//                return
-//            }
-//            toState.isStarting.toggle()
-//        }
         
         do {
             try viewContext.save()
