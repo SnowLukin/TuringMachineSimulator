@@ -11,6 +11,9 @@ import CoreData
 class ChooseDirectionViewModel: ObservableObject {
     func updateDirection(_ combination: Combination, to directionID: Int, viewContext: NSManagedObjectContext) {
         combination.direction = Int64(directionID)
+        if let algorithm = combination.option?.state?.algorithm {
+            algorithm.editDate = Date.now
+        }
         do {
             try viewContext.save()
             print("New direction saved successfully.")

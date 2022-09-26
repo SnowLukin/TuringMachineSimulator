@@ -41,6 +41,8 @@ class ImportAlgorithmViewModel: ObservableObject {
         let algorithm = Algorithm(context: viewContext)
         algorithm.name = sharedAlgorithm.name
         algorithm.algDescription = sharedAlgorithm.algorithmDescription
+        algorithm.editDate = Date.now
+        algorithm.creationDate = Date.now
         importTapes(sharedAlgorithm.tapes, to: algorithm, viewContext: viewContext)
         importStates(sharedAlgorithm.states, to: algorithm, viewContext: viewContext)
         folder.addToAlgorithms(algorithm)

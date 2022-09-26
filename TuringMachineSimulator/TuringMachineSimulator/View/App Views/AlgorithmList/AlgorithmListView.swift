@@ -26,18 +26,7 @@ struct AlgorithmListView: View {
                     ? folder.wrappedAlgorithms
                     : folder.wrappedAlgorithms.filter({ $0.wrappedName.contains(searchedAlgorithm) })
                 ) { algorithm in
-                    NavigationLink {
-                        AlgorithmView(algorithm: algorithm)
-                    } label: {
-                        VStack(alignment: .leading) {
-                            Text(algorithm.wrappedName)
-                                .font(.headline)
-                                .lineLimit(1)
-                            Text(viewModel.getAlgorithmEditedTimeForTextView(algorithm.wrappedEditDate))
-                                .font(.subheadline)
-                                .foregroundColor(.secondary)
-                        }
-                    }
+                    AlgorithmListCellView(algorithm: algorithm)
                 }
                 .onDelete(perform: deleteAlgorithm)
             }

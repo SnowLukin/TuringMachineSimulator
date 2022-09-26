@@ -11,6 +11,7 @@ import CoreData
 class AlgorithmInfoViewModel: ObservableObject {
     func updateName(_ name: String, for algorithm: Algorithm, viewContext: NSManagedObjectContext) {
         algorithm.name = name
+        algorithm.editDate = Date.now
         do {
             try viewContext.save()
             print("New name saved successfully.")
@@ -22,6 +23,7 @@ class AlgorithmInfoViewModel: ObservableObject {
     
     func updateDescription(_ value: String, for algorithm: Algorithm, viewContext: NSManagedObjectContext) {
         algorithm.algDescription = value
+        algorithm.editDate = Date.now
         do {
             try viewContext.save()
             print("New name saved successfully.")

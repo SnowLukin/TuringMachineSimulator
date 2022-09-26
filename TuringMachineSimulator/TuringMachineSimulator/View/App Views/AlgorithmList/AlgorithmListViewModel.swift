@@ -10,20 +10,6 @@ import CoreData
 
 class AlgorithmListViewModel: ObservableObject {
     
-    func getAlgorithmEditedTimeForTextView(_ date: Date) -> String {
-        if Calendar.current.isDateInYesterday(date) {
-            return "Yesterday"
-        }
-        
-        let formatter = DateFormatter()
-        if Calendar.current.isDateInToday(date) {
-            formatter.dateFormat = "HH:mm"
-            return formatter.string(from: date)
-        }
-        formatter.dateFormat = "d MMM y"
-        return formatter.string(from: date)
-    }
-    
     func createAlgorithm(_ name: String, for folder: Folder, viewContext: NSManagedObjectContext) {
         let algorithm = Algorithm(context: viewContext)
         algorithm.name = name
@@ -47,7 +33,7 @@ class AlgorithmListViewModel: ObservableObject {
         let tape = Tape(context: viewContext)
         tape.id = 0
         tape.headIndex = 0
-        tape.alphabet = "_"
+        tape.alphabet = ""
         tape.input = ""
         algorithm.addToTapes(tape)
         

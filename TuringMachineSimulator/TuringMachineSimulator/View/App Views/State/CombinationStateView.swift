@@ -12,7 +12,9 @@ class CombinationStateViewModel: ObservableObject {
     func updateToState(_ option: Option, to state: StateQ, viewContext: NSManagedObjectContext) {
         state.addToFromOptions(option)
         option.toState = state
-        
+        if let algorithm = state.algorithm {
+            algorithm.editDate = Date.now
+        }
         do {
             try viewContext.save()
             print("ToState saved successfully.")

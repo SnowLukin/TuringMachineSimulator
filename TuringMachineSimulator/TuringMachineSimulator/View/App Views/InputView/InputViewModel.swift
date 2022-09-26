@@ -123,6 +123,9 @@ class InputViewModel: ObservableObject {
             // If not possible -> text is empty.
             updateAlphabet(text, for: tape, viewContext: viewContext)
             removeInputCharactersWhichAreNotInAlphabet(for: tape)
+            if let algorithm = tape.algorithm {
+                algorithm.editDate = Date.now
+            }
             do {
                 try viewContext.save()
                 print("Alphabet (\(text)) saved successfully.")
@@ -143,6 +146,9 @@ class InputViewModel: ObservableObject {
             removeInputCharactersWhichAreNotInAlphabet(for: tape)
         }
         
+        if let algorithm = tape.algorithm {
+            algorithm.editDate = Date.now
+        }
         do {
             try viewContext.save()
             print("Alphabet (\(text)) saved successfully.")
@@ -164,6 +170,9 @@ class InputViewModel: ObservableObject {
         guard let lastCharacter = text.popLast() else {
             // If not possible -> text is empty.
             updateInput(text, for: tape)
+            if let algorithm = tape.algorithm {
+                algorithm.editDate = Date.now
+            }
             do {
                 try viewContext.save()
                 print("Input (\(text)) saved successfully.")
@@ -174,18 +183,15 @@ class InputViewModel: ObservableObject {
             return
         }
         
-        // Return if nothin changed
-        if tape.wrappedInput == text {
-            return
-        }
-        
         // if there is such character in alphabet - save it
         // otherwise delete it
         if tape.wrappedAlphabet.contains(lastCharacter) || lastCharacter == "_" {
             text.append(lastCharacter)
         }
         updateInput(text, for: tape)
-        
+        if let algorithm = tape.algorithm {
+            algorithm.editDate = Date.now
+        }
         do {
             try viewContext.save()
             print("Input (\(text)) saved successfully.")

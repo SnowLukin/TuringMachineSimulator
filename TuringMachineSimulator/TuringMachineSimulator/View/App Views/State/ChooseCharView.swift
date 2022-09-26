@@ -11,7 +11,9 @@ import CoreData
 class ChooseCharViewModel: ObservableObject {
     func updateToChar(_ combination: Combination, to char: String, viewContext: NSManagedObjectContext) {
         combination.toCharacter = char
-        
+        if let algorithm = combination.option?.state?.algorithm {
+            algorithm.editDate = Date.now
+        }
         do {
             try viewContext.save()
             print("ToChar saved successfully.")

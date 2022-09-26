@@ -116,6 +116,8 @@ extension PlayStackView {
                 .clipShape(Circle())
                 .shadow(radius: 10)
         }
+        .disabled(isPlaying)
+        .opacity(isPlaying ? 0.6 : 1)
     }
     
     private var resetButton: some View {

@@ -46,6 +46,7 @@ class PlayStackViewModel: ObservableObject {
             print("Error finding current option")
             return
         }
+        print("Current option id: \(currentOption.wrappedID)")
         
         for index in 0..<combination.count {
             let currentTape = algorithm.wrappedTapes[index]
@@ -59,23 +60,21 @@ class PlayStackViewModel: ObservableObject {
             case 0:
                 break
             case 1:
-                if currentTape.wrappedHeadIndex != -100 {
-                    DispatchQueue.main.async {
-                        currentTape.headIndex -= 1
-                    }
+                if currentTape.wrappedHeadIndex != -80 {
+                    currentTape.headIndex -= 1
                 }
             default:
-                if currentTape.wrappedHeadIndex != 100 {
-                    DispatchQueue.main.async {
-                        currentTape.headIndex += 1
-                    }
+                if currentTape.wrappedHeadIndex != 80 {
+                    currentTape.headIndex += 1
                 }
             }
         }
         
         // Setting new start state
+        print(startState.wrappedID)
         startState.isStarting.toggle()
-        guard let toState = algorithm.wrappedStates.first(where: { $0.wrappedID == currentOption.wrappedID }) else {
+        guard let toState = algorithm.wrappedStates.first(where: { $0 == currentOption.toState }) else {
+            print(currentOption.wrappedID)
             print("Error. Couldnt find toState.")
             return
         }

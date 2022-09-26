@@ -89,6 +89,10 @@ class TapeConfigViewModel: ObservableObject {
         viewContext.delete(tape)
         updateStates(for: algorithm, viewContext: viewContext)
         
+        if let algorithm = tape.algorithm {
+            algorithm.editDate = Date.now
+        }
+        
         do {
             try viewContext.save()
             print("Tape deletion saved successfully.")

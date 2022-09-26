@@ -29,6 +29,11 @@ struct InputView: View {
         .onAppear {
             text = purpose == .alphabet ? tape.wrappedAlphabet : tape.wrappedInput
         }
+        .onChange(of: tape.wrappedAlphabet) { newValue in
+            if purpose == .input {
+                text = tape.wrappedInput
+            }
+        }
     }
 }
 

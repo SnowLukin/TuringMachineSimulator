@@ -33,6 +33,7 @@ struct AlgorithmView: View {
                     
                     TapesWorkView(algorithm: algorithm)
                         .shadow(radius: 1)
+                        .disabled(isChanged)
             }
             PlayStackView(algorithm: algorithm, isChanged: $isChanged)
         }
@@ -45,7 +46,7 @@ struct AlgorithmView: View {
                     }
                 } label: {
                     Image(systemName: "square.and.arrow.up")
-                }
+                }.disabled(isChanged)
             }
             
             ToolbarItem(placement: .navigationBarTrailing) {
@@ -55,7 +56,7 @@ struct AlgorithmView: View {
                     }
                 } label: {
                     Image(systemName: "info.circle")
-                }
+                }.disabled(isChanged)
             }
         }
         .onAppear {
