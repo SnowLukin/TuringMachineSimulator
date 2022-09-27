@@ -22,15 +22,6 @@
 		<key>UIApplicationSupportsMultipleScenes</key>
 		<false/>
 	</dict>
-	<key>UILaunchScreen</key>
-	<dict>
-		<key>UIColorName</key>
-		<string>LaunchScreenBackground</string>
-		<key>UIImageName</key>
-		<string>LauchScreenIcon</string>
-		<key>UILaunchScreen</key>
-		<dict/>
-	</dict>
 	<key>UTImportedTypeDeclarations</key>
 	<array>
 		<dict>

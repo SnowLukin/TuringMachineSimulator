@@ -111,15 +111,21 @@ extension FolderListView {
         .contextMenu {
             if folder.wrappedName != "Algorithms" {
                 Button {
-                    alertTextField(title: "Rename Folder", message: "", hintText: "", primaryTitle: "Save", secondaryTitle: "Cancel") { newName in
-                        folder.name = newName
-                        do {
-                            try viewContext.save()
-                            print("Folder(s) successfully deleted.")
-                        } catch {
-                            print("Failed deleting folder(s).")
-                            let nsError = error as NSError
-                            print("\(nsError), \(nsError.userInfo)")
+                    alertTextField(title: "Rename Folder", message: "", hintText: "New name", primaryTitle: "Save", secondaryTitle: "Cancel") { newName in
+                        if newName.trimmingCharacters(in: .whitespaces) != "" && !folders.contains(where: { $0.wrappedName == newName }) {
+                            folder.name = newName
+                            do {
+                                try viewContext.save()
+                                print("Folder(s) name successfully changed.")
+                            } catch {
+                                print("Failed changing name.")
+                                let nsError = error as NSError
+                                print("\(nsError), \(nsError.userInfo)")
+                            }
+                        } else {
+                            withAnimation {
+                                showNameTakenMessage.toggle()
+                            }
                         }
                     } secondaryAction: { }
                 } label: {
@@ -154,10 +160,14 @@ extension FolderListView {
                     message: "Enter a name for this folder.",
                     hintText: "Name",
                     primaryTitle: "Save", secondaryTitle: "Cancel") { newFolderName in
-                        saveFolderAction(name: newFolderName)
-                } secondaryAction: {
-                    
-                }
+                        if newFolderName.trimmingCharacters(in: .whitespaces) != "" && !folders.contains(where: { $0.wrappedName == newFolderName }) {
+                            saveFolderAction(name: newFolderName)
+                        } else {
+                            withAnimation {
+                                showNameTakenMessage.toggle()
+                            }
+                        }
+                } secondaryAction: {}
             } label: {
                 Image(systemName: "folder.badge.plus")
                     .font(.title2)
