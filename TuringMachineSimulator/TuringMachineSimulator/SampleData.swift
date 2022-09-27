@@ -15,8 +15,8 @@ struct SampleData {
         let tape = Tape(context: context)
         tape.id = 0
         tape.headIndex = 0
-        tape.alphabet = "_abc"
-        tape.input = "aabbcc"
+        tape.alphabet = "_ab"
+        tape.input = "aabb"
         
         for index in -80..<81 {
             // MARK: - Component
@@ -44,10 +44,10 @@ struct SampleData {
             // MARK: - Combination
             let combination = Combination(context: context)
             combination.id = 0
-            combination.direction = 0
+            combination.direction = 2
             let character = tape.wrappedAlphabet.map{ String($0) }[index]
             combination.character = character
-            combination.toCharacter = character
+            combination.toCharacter = character == "a" ? "b" : "a"
             
             option.addToCombinations(combination)
             
@@ -60,9 +60,9 @@ struct SampleData {
         let algorithm = Algorithm(context: context)
         algorithm.name = "Test Algorithm"
         algorithm.pinned = false
-        
+        algorithm.creationDate = Date.now
+        algorithm.editDate = Date.now
         algorithm.addToTapes(tape)
-        
         algorithm.addToStates(state)
         
         // MARK: - Folder
@@ -75,9 +75,8 @@ struct SampleData {
         do {
             try context.save()
         } catch {
-            // handle error for production
             let nsError = error as NSError
-            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+            print("Unresolved error \(nsError), \(nsError.userInfo)")
         }
     }
     

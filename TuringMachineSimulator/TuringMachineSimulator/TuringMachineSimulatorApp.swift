@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct TuringMachineSimulatorApp: App {
-    let persistenceController = PersistenceController.preview
+    let persistenceController = PersistenceController.shared
 
     var body: some Scene {
         WindowGroup {

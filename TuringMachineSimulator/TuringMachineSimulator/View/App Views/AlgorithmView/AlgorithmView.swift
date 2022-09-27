@@ -38,6 +38,7 @@ struct AlgorithmView: View {
             PlayStackView(algorithm: algorithm, isChanged: $isChanged)
         }
         .navigationTitle(algorithm.wrappedName)
+        .navigationBarBackButtonHidden(isChanged)
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button {

@@ -32,12 +32,22 @@ struct InitialView: View {
             NavigationView {
                 FolderListView()
             }.navigationViewStyle(.stack)
+                .onAppear {
+                    if folders.isEmpty {
+                        SampleData().prepareData(for: viewContext)
+                    }
+                }
         } else {
             NavigationView {
                 FolderListView()
                 defaultDetailView()
                 defaultSecondaryView()
             }.navigationViewStyle(.columns)
+                .onAppear {
+                    if folders.isEmpty {
+                        SampleData().prepareData(for: viewContext)
+                    }
+                }
         }
     }
 }
