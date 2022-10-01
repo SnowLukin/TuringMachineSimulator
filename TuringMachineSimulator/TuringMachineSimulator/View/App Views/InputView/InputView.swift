@@ -66,8 +66,10 @@ extension InputView {
             .background(Color(uiColor: .secondarySystemBackground))
             .cornerRadius(12)
             .onChange(of: text) { newValue in
-                print(newValue)
                 if purpose == .alphabet {
+                    if text.isEmpty {
+                        text = "_"
+                    }
                     viewModel.setNewAlphabetValue(text, for: tape, viewContext: viewContext)
                     text = tape.wrappedAlphabet
                 } else {

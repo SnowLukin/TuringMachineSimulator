@@ -99,13 +99,13 @@ extension FolderListView {
         } label: {
             HStack {
                 Image(systemName: "folder")
-                    .foregroundColor(.blue)
+                    .foregroundColor(.orange)
                     .font(.title2)
                 Text(folder.wrappedName).lineLimit(1)
                 Spacer()
                 Text("\(folder.wrappedAlgorithms.count)")
                     .font(.subheadline)
-                    .foregroundColor(.gray)
+                    .foregroundColor(.secondary)
             }
         }
         .contextMenu {

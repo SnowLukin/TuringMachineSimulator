@@ -33,7 +33,7 @@ class AlgorithmListViewModel: ObservableObject {
         let tape = Tape(context: viewContext)
         tape.id = 0
         tape.headIndex = 0
-        tape.alphabet = ""
+        tape.alphabet = "_"
         tape.input = ""
         algorithm.addToTapes(tape)
         

@@ -137,7 +137,7 @@ class InputViewModel: ObservableObject {
         }
         
         // If last character is a "space". Remove it.
-        if lastCharacter == " " || lastCharacter == "_" {
+        if lastCharacter == " " || (lastCharacter == "_" && !text.isEmpty) {
             return
         }  else if !text.contains(lastCharacter) {  // Checking new character already exist
             // if it isn't - add it

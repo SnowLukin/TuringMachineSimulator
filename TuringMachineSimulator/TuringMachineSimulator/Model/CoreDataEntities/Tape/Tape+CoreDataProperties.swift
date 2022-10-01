@@ -32,7 +32,7 @@ extension Tape {
     }
     
     public var wrappedAlphabet: String {
-        return alphabet ?? ""
+        return alphabet ?? "_"
     }
     
     public var wrappedInput: String {
