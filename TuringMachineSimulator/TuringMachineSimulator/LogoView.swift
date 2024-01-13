@@ -8,29 +8,17 @@
 import SwiftUI
 
 struct LogoView: View {
-    
+
     var body: some View {
         ZStack {
             Color.black.ignoresSafeArea()
-        VStack {
-            HStack {
-                cellView("1")
-                cellView("2", isSelected: true)
-                cellView("3")
+            VStack {
+                row(values: ["1", "2", "3"])
+                row(values: ["a", "b", "c"])
+                row(values: ["∆", "ƒ", "~"])
             }
-            HStack {
-                cellView("a")
-                cellView("b", isSelected: true)
-                cellView("c")
-            }
-            HStack {
-                cellView("∆")
-                cellView("ƒ", isSelected: true)
-                cellView("~")
-            }
-        }.frame(width: 325, height: 325)
-            .background(.white)
-            .cornerRadius(40)
+            .frame(width: 325, height: 325)
+            .background(.white, in: .rect(cornerRadius: 40))
         }
     }
 }
@@ -42,6 +30,16 @@ struct LogoView_Previews: PreviewProvider {
 }
 
 extension LogoView {
+
+    @ViewBuilder
+    private func row(values: [String], selectedIndex: Int = 1) -> some View {
+        HStack {
+            ForEach(0..<values.count, id: \.self) { index in
+                cellView(values[index], isSelected: index == selectedIndex)
+            }
+        }
+    }
+
     @ViewBuilder
     private func cellView(_ value: String, isSelected: Bool = false) -> some View {
         Text(value)
@@ -61,6 +59,5 @@ extension LogoView {
                         lineWidth: 5
                     )
             )
-//            .scaleEffect(isSelected ? 1.07 : 1)
     }
 }

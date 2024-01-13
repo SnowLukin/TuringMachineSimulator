@@ -1,0 +1,9 @@
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+  - Pods
+  - Templates
+force_unwrapping:
+  severity: warning
+force_cast:
+  severity: warning
+opt_in_rules:
+  - force_unwrapping

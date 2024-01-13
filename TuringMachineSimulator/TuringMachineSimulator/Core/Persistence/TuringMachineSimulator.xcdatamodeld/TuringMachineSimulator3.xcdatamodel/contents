@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22225" systemVersion="23A344" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CDAlgorithm" representedClassName="CDAlgorithm" syncable="YES" codeGenerationType="class">
+        <attribute name="activeStateId" optional="YES" attributeType="String"/>
+        <attribute name="algDescription" optional="YES" attributeType="String"/>
+        <attribute name="createdDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="lastEditDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="startingStateId" optional="YES" attributeType="String"/>
+        <relationship name="folder" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDFolder" inverseName="algorithms" inverseEntity="CDFolder"/>
+        <relationship name="states" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="CDMachineState" inverseName="algorithm" inverseEntity="CDMachineState"/>
+        <relationship name="tapes" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="CDTape" inverseName="algorithm" inverseEntity="CDTape"/>
+    </entity>
+    <entity name="CDCombination" representedClassName="CDCombination" syncable="YES" codeGenerationType="class">
+        <attribute name="directionIndex" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="fromChar" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="toChar" optional="YES" attributeType="String"/>
+        <relationship name="option" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDOption" inverseName="combinations" inverseEntity="CDOption"/>
+    </entity>
+    <entity name="CDFolder" representedClassName="CDFolder" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="algorithms" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="CDAlgorithm" inverseName="folder" inverseEntity="CDAlgorithm"/>
+    </entity>
+    <entity name="CDMachineState" representedClassName="CDMachineState" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="algorithm" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDAlgorithm" inverseName="states" inverseEntity="CDAlgorithm"/>
+        <relationship name="options" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="CDOption" inverseName="state" inverseEntity="CDOption"/>
+    </entity>
+    <entity name="CDOption" representedClassName="CDOption" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="toStateId" optional="YES" attributeType="String"/>
+        <relationship name="combinations" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="CDCombination" inverseName="option" inverseEntity="CDCombination"/>
+        <relationship name="state" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDMachineState" inverseName="options" inverseEntity="CDMachineState"/>
+    </entity>
+    <entity name="CDTape" representedClassName="CDTape" syncable="YES" codeGenerationType="class">
+        <attribute name="createdDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="headIndex" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="input" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="workingHeadIndex" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="workingInput" optional="YES" attributeType="String"/>
+        <relationship name="algorithm" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDAlgorithm" inverseName="tapes" inverseEntity="CDAlgorithm"/>
+    </entity>
+</model>
