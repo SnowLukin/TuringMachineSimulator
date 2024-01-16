@@ -24,13 +24,13 @@
 		D70DC4EF2B4ED06600C643E0 /* CombinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC4732B4ED06500C643E0 /* CombinationView.swift */; };
 		D70DC4F02B4ED06600C643E0 /* MachineStateListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC4762B4ED06500C643E0 /* MachineStateListViewModel.swift */; };
 		D70DC4F12B4ED06600C643E0 /* MachineStateSelectableListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC4782B4ED06500C643E0 /* MachineStateSelectableListView.swift */; };
-		D70DC4F22B4ED06600C643E0 /* MachineStateListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC4792B4ED06500C643E0 /* MachineStateListView.swift */; };
+		D70DC4F22B4ED06600C643E0 /* MachineStateListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC4792B4ED06500C643E0 /* MachineStateListScreen.swift */; };
 		D70DC4F32B4ED06600C643E0 /* OptionSharedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC47B2B4ED06500C643E0 /* OptionSharedStore.swift */; };
 		D70DC4F42B4ED06600C643E0 /* OptionListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC47D2B4ED06500C643E0 /* OptionListViewModel.swift */; };
 		D70DC4F52B4ED06600C643E0 /* OptionDestinationMachineStateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC47E2B4ED06500C643E0 /* OptionDestinationMachineStateViewModel.swift */; };
 		D70DC4F62B4ED06600C643E0 /* OptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC47F2B4ED06500C643E0 /* OptionViewModel.swift */; };
-		D70DC4F72B4ED06600C643E0 /* OptionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC4812B4ED06500C643E0 /* OptionListView.swift */; };
-		D70DC4F82B4ED06600C643E0 /* OptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC4822B4ED06500C643E0 /* OptionView.swift */; };
+		D70DC4F72B4ED06600C643E0 /* OptionListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC4812B4ED06500C643E0 /* OptionListScreen.swift */; };
+		D70DC4F82B4ED06600C643E0 /* OptionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC4822B4ED06500C643E0 /* OptionScreen.swift */; };
 		D70DC4F92B4ED06600C643E0 /* OptionDestinationMachineStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC4832B4ED06500C643E0 /* OptionDestinationMachineStateView.swift */; };
 		D70DC4FA2B4ED06600C643E0 /* FolderListScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC4862B4ED06500C643E0 /* FolderListScreenViewModel.swift */; };
 		D70DC4FB2B4ED06600C643E0 /* NewFolderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC4882B4ED06500C643E0 /* NewFolderButton.swift */; };
@@ -46,7 +46,7 @@
 		D70DC5052B4ED06600C643E0 /* TapeComponentsLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC4972B4ED06500C643E0 /* TapeComponentsLineView.swift */; };
 		D70DC5062B4ED06600C643E0 /* TapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC4982B4ED06500C643E0 /* TapeView.swift */; };
 		D70DC5072B4ED06600C643E0 /* TapeComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC4992B4ED06500C643E0 /* TapeComponentView.swift */; };
-		D70DC5082B4ED06600C643E0 /* TapeConfigListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC49A2B4ED06500C643E0 /* TapeConfigListView.swift */; };
+		D70DC5082B4ED06600C643E0 /* TapeConfigListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC49A2B4ED06500C643E0 /* TapeConfigListScreen.swift */; };
 		D70DC5092B4ED06600C643E0 /* AlgorithmViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC49D2B4ED06500C643E0 /* AlgorithmViewModel.swift */; };
 		D70DC50A2B4ED06600C643E0 /* AlgorithmSharedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC49E2B4ED06500C643E0 /* AlgorithmSharedStore.swift */; };
 		D70DC50B2B4ED06600C643E0 /* AlgorithmScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC4A02B4ED06500C643E0 /* AlgorithmScreen.swift */; };
@@ -93,11 +93,10 @@
 		D70DC5362B4ED06600C643E0 /* CDOption+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC4D92B4ED06600C643E0 /* CDOption+Extension.swift */; };
 		D70DC5372B4ED06600C643E0 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC4DA2B4ED06600C643E0 /* String+Extension.swift */; };
 		D70DC5382B4ED06600C643E0 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC4DB2B4ED06600C643E0 /* Array+Extension.swift */; };
-		D70DC5392B4ED06600C643E0 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC4DD2B4ED06600C643E0 /* Persistence.swift */; };
+		D70DC5392B4ED06600C643E0 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC4DD2B4ED06600C643E0 /* PersistenceController.swift */; };
 		D70DC53A2B4ED06600C643E0 /* TuringMachineCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D70DC4DE2B4ED06600C643E0 /* TuringMachineCoreData.xcdatamodeld */; };
 		D70DC53B2B4ED06600C643E0 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC4E02B4ED06600C643E0 /* AppEnvironment.swift */; };
 		D70DC53E2B4ED49A00C643E0 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = D70DC53D2B4ED49A00C643E0 /* Swinject */; };
-		D70DC5402B4ED49A00C643E0 /* Swinject-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = D70DC53F2B4ED49A00C643E0 /* Swinject-Dynamic */; };
 		D7544BA428BE6657003DFB12 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7544BA328BE6657003DFB12 /* LogoView.swift */; };
 		D7B0349228BCF41500F3B135 /* DocumentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B0349128BCF41500F3B135 /* DocumentManager.swift */; };
 		D7E8A86028B56F2200F40736 /* TuringMachineSimulatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E8A85F28B56F2200F40736 /* TuringMachineSimulatorApp.swift */; };
@@ -123,13 +122,13 @@
 		D70DC4732B4ED06500C643E0 /* CombinationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CombinationView.swift; sourceTree = "<group>"; };
 		D70DC4762B4ED06500C643E0 /* MachineStateListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachineStateListViewModel.swift; sourceTree = "<group>"; };
 		D70DC4782B4ED06500C643E0 /* MachineStateSelectableListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachineStateSelectableListView.swift; sourceTree = "<group>"; };
-		D70DC4792B4ED06500C643E0 /* MachineStateListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachineStateListView.swift; sourceTree = "<group>"; };
+		D70DC4792B4ED06500C643E0 /* MachineStateListScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachineStateListScreen.swift; sourceTree = "<group>"; };
 		D70DC47B2B4ED06500C643E0 /* OptionSharedStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionSharedStore.swift; sourceTree = "<group>"; };
 		D70DC47D2B4ED06500C643E0 /* OptionListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionListViewModel.swift; sourceTree = "<group>"; };
 		D70DC47E2B4ED06500C643E0 /* OptionDestinationMachineStateViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionDestinationMachineStateViewModel.swift; sourceTree = "<group>"; };
 		D70DC47F2B4ED06500C643E0 /* OptionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionViewModel.swift; sourceTree = "<group>"; };
-		D70DC4812B4ED06500C643E0 /* OptionListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionListView.swift; sourceTree = "<group>"; };
-		D70DC4822B4ED06500C643E0 /* OptionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionView.swift; sourceTree = "<group>"; };
+		D70DC4812B4ED06500C643E0 /* OptionListScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionListScreen.swift; sourceTree = "<group>"; };
+		D70DC4822B4ED06500C643E0 /* OptionScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionScreen.swift; sourceTree = "<group>"; };
 		D70DC4832B4ED06500C643E0 /* OptionDestinationMachineStateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionDestinationMachineStateView.swift; sourceTree = "<group>"; };
 		D70DC4862B4ED06500C643E0 /* FolderListScreenViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderListScreenViewModel.swift; sourceTree = "<group>"; };
 		D70DC4882B4ED06500C643E0 /* NewFolderButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewFolderButton.swift; sourceTree = "<group>"; };
@@ -145,7 +144,7 @@
 		D70DC4972B4ED06500C643E0 /* TapeComponentsLineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapeComponentsLineView.swift; sourceTree = "<group>"; };
 		D70DC4982B4ED06500C643E0 /* TapeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapeView.swift; sourceTree = "<group>"; };
 		D70DC4992B4ED06500C643E0 /* TapeComponentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapeComponentView.swift; sourceTree = "<group>"; };
-		D70DC49A2B4ED06500C643E0 /* TapeConfigListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapeConfigListView.swift; sourceTree = "<group>"; };
+		D70DC49A2B4ED06500C643E0 /* TapeConfigListScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapeConfigListScreen.swift; sourceTree = "<group>"; };
 		D70DC49D2B4ED06500C643E0 /* AlgorithmViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlgorithmViewModel.swift; sourceTree = "<group>"; };
 		D70DC49E2B4ED06500C643E0 /* AlgorithmSharedStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlgorithmSharedStore.swift; sourceTree = "<group>"; };
 		D70DC4A02B4ED06500C643E0 /* AlgorithmScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlgorithmScreen.swift; sourceTree = "<group>"; };
@@ -192,7 +191,7 @@
 		D70DC4D92B4ED06600C643E0 /* CDOption+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDOption+Extension.swift"; sourceTree = "<group>"; };
 		D70DC4DA2B4ED06600C643E0 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		D70DC4DB2B4ED06600C643E0 /* Array+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
-		D70DC4DD2B4ED06600C643E0 /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		D70DC4DD2B4ED06600C643E0 /* PersistenceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		D70DC4DF2B4ED06600C643E0 /* TestTuringMachine.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TestTuringMachine.xcdatamodel; sourceTree = "<group>"; };
 		D70DC4E02B4ED06600C643E0 /* AppEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
 		D7544BA328BE6657003DFB12 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
@@ -210,7 +209,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D70DC53E2B4ED49A00C643E0 /* Swinject in Frameworks */,
-				D70DC5402B4ED49A00C643E0 /* Swinject-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,7 +219,8 @@
 			isa = PBXGroup;
 			children = (
 				D70DC4592B4ED06500C643E0 /* Core */,
-				D70DC4612B4ED06500C643E0 /* Screens */,
+				D7F8964F2B569D7300835D8C /* Shared */,
+				D70DC4612B4ED06500C643E0 /* Features */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -261,58 +260,18 @@
 			path = ReusableViews;
 			sourceTree = "<group>";
 		};
-		D70DC4612B4ED06500C643E0 /* Screens */ = {
+		D70DC4612B4ED06500C643E0 /* Features */ = {
 			isa = PBXGroup;
 			children = (
 				D70DC48B2B4ED06500C643E0 /* Root */,
-				D70DC4842B4ED06500C643E0 /* FolderScreen */,
-				D70DC4622B4ED06500C643E0 /* AlgorithmListScreen */,
-				D70DC49B2B4ED06500C643E0 /* AlgorithmScreen */,
+				D70DC4842B4ED06500C643E0 /* Folder */,
+				D70DC49B2B4ED06500C643E0 /* Algorithm */,
 				D70DC4902B4ED06500C643E0 /* Tape */,
 				D70DC4742B4ED06500C643E0 /* MachineState */,
 				D70DC47A2B4ED06500C643E0 /* Option */,
 				D70DC46E2B4ED06500C643E0 /* Combination */,
 			);
-			path = Screens;
-			sourceTree = "<group>";
-		};
-		D70DC4622B4ED06500C643E0 /* AlgorithmListScreen */ = {
-			isa = PBXGroup;
-			children = (
-				D70DC4632B4ED06500C643E0 /* ViewModels */,
-				D70DC4662B4ED06500C643E0 /* Views */,
-				D70DC46C2B4ED06500C643E0 /* Helpers */,
-			);
-			path = AlgorithmListScreen;
-			sourceTree = "<group>";
-		};
-		D70DC4632B4ED06500C643E0 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				D70DC4642B4ED06500C643E0 /* AlgorithmListScreenViewModel.swift */,
-				D70DC4652B4ED06500C643E0 /* ActiveStateListViewModel.swift */,
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		D70DC4662B4ED06500C643E0 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				D70DC4672B4ED06500C643E0 /* AlgorithmCellView.swift */,
-				D70DC4682B4ED06500C643E0 /* EmptyFolderMessageView.swift */,
-				D70DC4692B4ED06500C643E0 /* AlgorithmListScreen.swift */,
-				D70DC46A2B4ED06500C643E0 /* ActiveStateListView.swift */,
-				D70DC46B2B4ED06500C643E0 /* NewAlgorithmButton.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		D70DC46C2B4ED06500C643E0 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				D70DC46D2B4ED06500C643E0 /* AlgorithmImportHelper.swift */,
-			);
-			path = Helpers;
+			path = Features;
 			sourceTree = "<group>";
 		};
 		D70DC46E2B4ED06500C643E0 /* Combination */ = {
@@ -345,6 +304,7 @@
 			isa = PBXGroup;
 			children = (
 				D70DC4752B4ED06500C643E0 /* ViewModels */,
+				D7F896532B569E1500835D8C /* Screens */,
 				D70DC4772B4ED06500C643E0 /* Views */,
 			);
 			path = MachineState;
@@ -362,7 +322,6 @@
 			isa = PBXGroup;
 			children = (
 				D70DC4782B4ED06500C643E0 /* MachineStateSelectableListView.swift */,
-				D70DC4792B4ED06500C643E0 /* MachineStateListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -370,8 +329,8 @@
 		D70DC47A2B4ED06500C643E0 /* Option */ = {
 			isa = PBXGroup;
 			children = (
-				D70DC47B2B4ED06500C643E0 /* OptionSharedStore.swift */,
 				D70DC47C2B4ED06500C643E0 /* ViewModels */,
+				D7F896552B56A28700835D8C /* Screens */,
 				D70DC4802B4ED06500C643E0 /* Views */,
 			);
 			path = Option;
@@ -390,20 +349,19 @@
 		D70DC4802B4ED06500C643E0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D70DC4812B4ED06500C643E0 /* OptionListView.swift */,
-				D70DC4822B4ED06500C643E0 /* OptionView.swift */,
 				D70DC4832B4ED06500C643E0 /* OptionDestinationMachineStateView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		D70DC4842B4ED06500C643E0 /* FolderScreen */ = {
+		D70DC4842B4ED06500C643E0 /* Folder */ = {
 			isa = PBXGroup;
 			children = (
 				D70DC4852B4ED06500C643E0 /* ViewModels */,
+				D7F896502B569DC200835D8C /* Screens */,
 				D70DC4872B4ED06500C643E0 /* Views */,
 			);
-			path = FolderScreen;
+			path = Folder;
 			sourceTree = "<group>";
 		};
 		D70DC4852B4ED06500C643E0 /* ViewModels */ = {
@@ -419,7 +377,6 @@
 			children = (
 				D70DC4882B4ED06500C643E0 /* NewFolderButton.swift */,
 				D70DC4892B4ED06500C643E0 /* FolderCellView.swift */,
-				D70DC48A2B4ED06500C643E0 /* FolderListScreen.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -446,6 +403,7 @@
 			isa = PBXGroup;
 			children = (
 				D70DC4912B4ED06500C643E0 /* ViewModels */,
+				D7F896542B569E5500835D8C /* Screens */,
 				D70DC4942B4ED06500C643E0 /* Views */,
 			);
 			path = Tape;
@@ -468,24 +426,26 @@
 				D70DC4972B4ED06500C643E0 /* TapeComponentsLineView.swift */,
 				D70DC4982B4ED06500C643E0 /* TapeView.swift */,
 				D70DC4992B4ED06500C643E0 /* TapeComponentView.swift */,
-				D70DC49A2B4ED06500C643E0 /* TapeConfigListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		D70DC49B2B4ED06500C643E0 /* AlgorithmScreen */ = {
+		D70DC49B2B4ED06500C643E0 /* Algorithm */ = {
 			isa = PBXGroup;
 			children = (
+				D7F896522B569DE800835D8C /* Models */,
 				D70DC49C2B4ED06500C643E0 /* ViewModels */,
-				D70DC49E2B4ED06500C643E0 /* AlgorithmSharedStore.swift */,
+				D7F896512B569DD900835D8C /* Screens */,
 				D70DC49F2B4ED06500C643E0 /* Views */,
 			);
-			path = AlgorithmScreen;
+			path = Algorithm;
 			sourceTree = "<group>";
 		};
 		D70DC49C2B4ED06500C643E0 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				D70DC4642B4ED06500C643E0 /* AlgorithmListScreenViewModel.swift */,
+				D70DC4652B4ED06500C643E0 /* ActiveStateListViewModel.swift */,
 				D70DC49D2B4ED06500C643E0 /* AlgorithmViewModel.swift */,
 			);
 			path = ViewModels;
@@ -494,7 +454,10 @@
 		D70DC49F2B4ED06500C643E0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D70DC4A02B4ED06500C643E0 /* AlgorithmScreen.swift */,
+				D70DC4672B4ED06500C643E0 /* AlgorithmCellView.swift */,
+				D70DC4682B4ED06500C643E0 /* EmptyFolderMessageView.swift */,
+				D70DC46A2B4ED06500C643E0 /* ActiveStateListView.swift */,
+				D70DC46B2B4ED06500C643E0 /* NewAlgorithmButton.swift */,
 				D70DC4A12B4ED06500C643E0 /* PlayStackView.swift */,
 				D70DC4A22B4ED06500C643E0 /* ConfigurationsView.swift */,
 			);
@@ -595,11 +558,11 @@
 		D70DC4CB2B4ED06600C643E0 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				D70DC4E02B4ED06600C643E0 /* AppEnvironment.swift */,
 				D70DC4CC2B4ED06600C643E0 /* DI */,
 				D70DC4D12B4ED06600C643E0 /* Logger */,
 				D70DC4D32B4ED06600C643E0 /* Extensions */,
 				D70DC4DC2B4ED06600C643E0 /* Persistence */,
-				D70DC4E02B4ED06600C643E0 /* AppEnvironment.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -648,7 +611,7 @@
 		D70DC4DC2B4ED06600C643E0 /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
-				D70DC4DD2B4ED06600C643E0 /* Persistence.swift */,
+				D70DC4DD2B4ED06600C643E0 /* PersistenceController.swift */,
 				D70DC4DE2B4ED06600C643E0 /* TuringMachineCoreData.xcdatamodeld */,
 			);
 			path = Persistence;
@@ -695,6 +658,65 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		D7F8964F2B569D7300835D8C /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				D70DC49E2B4ED06500C643E0 /* AlgorithmSharedStore.swift */,
+				D70DC47B2B4ED06500C643E0 /* OptionSharedStore.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		D7F896502B569DC200835D8C /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				D70DC48A2B4ED06500C643E0 /* FolderListScreen.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		D7F896512B569DD900835D8C /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				D70DC4692B4ED06500C643E0 /* AlgorithmListScreen.swift */,
+				D70DC4A02B4ED06500C643E0 /* AlgorithmScreen.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		D7F896522B569DE800835D8C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D70DC46D2B4ED06500C643E0 /* AlgorithmImportHelper.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D7F896532B569E1500835D8C /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				D70DC4792B4ED06500C643E0 /* MachineStateListScreen.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		D7F896542B569E5500835D8C /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				D70DC49A2B4ED06500C643E0 /* TapeConfigListScreen.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		D7F896552B56A28700835D8C /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				D70DC4812B4ED06500C643E0 /* OptionListScreen.swift */,
+				D70DC4822B4ED06500C643E0 /* OptionScreen.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -714,7 +736,6 @@
 			name = TuringMachineSimulator;
 			packageProductDependencies = (
 				D70DC53D2B4ED49A00C643E0 /* Swinject */,
-				D70DC53F2B4ED49A00C643E0 /* Swinject-Dynamic */,
 			);
 			productName = TuringMachineSimulator;
 			productReference = D7E8A85C28B56F2200F40736 /* TuringMachineSimulator.app */;
@@ -801,13 +822,13 @@
 				D70DC52E2B4ED06600C643E0 /* Resolver.swift in Sources */,
 				D70DC5352B4ED06600C643E0 /* CDMachineState+Extension.swift in Sources */,
 				D70DC5002B4ED06600C643E0 /* Coordinator.swift in Sources */,
-				D70DC4F22B4ED06600C643E0 /* MachineStateListView.swift in Sources */,
+				D70DC4F22B4ED06600C643E0 /* MachineStateListScreen.swift in Sources */,
 				D70DC5062B4ED06600C643E0 /* TapeView.swift in Sources */,
 				D70DC5272B4ED06600C643E0 /* FakeAlgorithmRepository.swift in Sources */,
 				D70DC5052B4ED06600C643E0 /* TapeComponentsLineView.swift in Sources */,
 				D70DC4F02B4ED06600C643E0 /* MachineStateListViewModel.swift in Sources */,
 				D70DC4E22B4ED06600C643E0 /* CirclyModifier.swift in Sources */,
-				D70DC4F72B4ED06600C643E0 /* OptionListView.swift in Sources */,
+				D70DC4F72B4ED06600C643E0 /* OptionListScreen.swift in Sources */,
 				D70DC50B2B4ED06600C643E0 /* AlgorithmScreen.swift in Sources */,
 				D70DC4E72B4ED06600C643E0 /* AlgorithmCellView.swift in Sources */,
 				D70DC5292B4ED06600C643E0 /* FakeCombinationRepository.swift in Sources */,
@@ -819,7 +840,7 @@
 				D70DC5202B4ED06600C643E0 /* DefaultFolderRepository.swift in Sources */,
 				D70DC5312B4ED06600C643E0 /* AppLogger.swift in Sources */,
 				D70DC4F62B4ED06600C643E0 /* OptionViewModel.swift in Sources */,
-				D70DC4F82B4ED06600C643E0 /* OptionView.swift in Sources */,
+				D70DC4F82B4ED06600C643E0 /* OptionScreen.swift in Sources */,
 				D70DC53A2B4ED06600C643E0 /* TuringMachineCoreData.xcdatamodeld in Sources */,
 				D70DC4FE2B4ED06600C643E0 /* RootView.swift in Sources */,
 				D70DC5332B4ED06600C643E0 /* CDAlgorithm+Extension.swift in Sources */,
@@ -860,7 +881,7 @@
 				D70DC51C2B4ED06600C643E0 /* AppImages.swift in Sources */,
 				D70DC4EF2B4ED06600C643E0 /* CombinationView.swift in Sources */,
 				D70DC5302B4ED06600C643E0 /* Resolver+Repositories.swift in Sources */,
-				D70DC5392B4ED06600C643E0 /* Persistence.swift in Sources */,
+				D70DC5392B4ED06600C643E0 /* PersistenceController.swift in Sources */,
 				D70DC51B2B4ED06600C643E0 /* Direction.swift in Sources */,
 				D7544BA428BE6657003DFB12 /* LogoView.swift in Sources */,
 				D70DC5152B4ED06600C643E0 /* Option.swift in Sources */,
@@ -881,7 +902,7 @@
 				D7E8A86028B56F2200F40736 /* TuringMachineSimulatorApp.swift in Sources */,
 				D70DC5192B4ED06600C643E0 /* Tape.swift in Sources */,
 				D70DC4E62B4ED06600C643E0 /* ActiveStateListViewModel.swift in Sources */,
-				D70DC5082B4ED06600C643E0 /* TapeConfigListView.swift in Sources */,
+				D70DC5082B4ED06600C643E0 /* TapeConfigListScreen.swift in Sources */,
 				D70DC51F2B4ED06600C643E0 /* DefaultAlgorithmRepository.swift in Sources */,
 				D70DC4EE2B4ED06600C643E0 /* CombinationConfigListView.swift in Sources */,
 				D70DC5362B4ED06600C643E0 /* CDOption+Extension.swift in Sources */,
@@ -1118,11 +1139,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D70DC53C2B4ED49A00C643E0 /* XCRemoteSwiftPackageReference "Swinject" */;
 			productName = Swinject;
-		};
-		D70DC53F2B4ED49A00C643E0 /* Swinject-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D70DC53C2B4ED49A00C643E0 /* XCRemoteSwiftPackageReference "Swinject" */;
-			productName = "Swinject-Dynamic";
 		};
 /* End XCSwiftPackageProductDependency section */
 

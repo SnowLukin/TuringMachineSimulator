@@ -41,7 +41,7 @@ extension Tape {
         self.name = name
         self.input = includePadding ? input.includePadding() : input
         self.workingInput = self.input
-        self.headIndex = headIndex ?? (includePadding ? 201 : 0)
+        self.headIndex = headIndex ?? (includePadding ? 200 : 0)
         self.workingHeadIndex = self.headIndex
     }
 }
@@ -83,8 +83,8 @@ extension Tape {
     static var sample: Tape {
         Tape(
             name: "Test tape",
-            input: "abcdefghijklmnopqrstuvwxyz".includePadding(),
-            headIndex: 201
+            input: "abcdefghijklmnopqrstuvwxyz",
+            headIndex: 200
         )
     }
 }
