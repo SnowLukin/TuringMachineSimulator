@@ -467,8 +467,8 @@
 		D70DC4A52B4ED06500C643E0 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				D70DC4A62B4ED06500C643E0 /* Repositories */,
-				D70DC4AD2B4ED06500C643E0 /* Models */,
+				D70DC4BA2B4ED06600C643E0 /* Repositories */,
+				D70DC4C82B4ED06600C643E0 /* Errors */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -483,7 +483,8 @@
 				D70DC4A82B4ED06500C643E0 /* OptionRepository.swift */,
 				D70DC4A72B4ED06500C643E0 /* CombinationRepository.swift */,
 			);
-			path = Repositories;
+			name = Repositories;
+			path = ../Data/Repositories;
 			sourceTree = "<group>";
 		};
 		D70DC4AD2B4ED06500C643E0 /* Models */ = {
@@ -513,8 +514,8 @@
 		D70DC4B92B4ED06600C643E0 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				D70DC4BA2B4ED06600C643E0 /* Repositories */,
-				D70DC4C82B4ED06600C643E0 /* Errors */,
+				D70DC4A62B4ED06500C643E0 /* Repositories */,
+				D70DC4AD2B4ED06500C643E0 /* Models */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -530,7 +531,8 @@
 				D70DC4BE2B4ED06600C643E0 /* DefaultCombinationRepository.swift */,
 				D70DC4C02B4ED06600C643E0 /* Fake */,
 			);
-			path = Repositories;
+			name = Repositories;
+			path = ../Domain/Repositories;
 			sourceTree = "<group>";
 		};
 		D70DC4C02B4ED06600C643E0 /* Fake */ = {
