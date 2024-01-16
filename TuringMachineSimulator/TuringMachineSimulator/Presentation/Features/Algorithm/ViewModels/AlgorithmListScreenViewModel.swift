@@ -20,10 +20,12 @@ final class AlgorithmListScreenViewModel: ObservableObject {
     }
 
     private let repository: AlgorithmRepository
+    private let algorithmImporter: AlgorithmImporter
 
     init(folder: Folder, repository: AlgorithmRepository) {
         self.folder = folder
         self.repository = repository
+        self.algorithmImporter = AlgorithmImporter(repository: repository)
     }
 
     func fetchAlgorithms() {
@@ -51,6 +53,15 @@ final class AlgorithmListScreenViewModel: ObservableObject {
         do {
             try repository.delete(algorithm: algorithm)
             fetchAlgorithms()
+        } catch {
+            AppLogger.error(error.localizedDescription)
+        }
+    }
+
+    func importAlgorithm(_ result: Result<URL, Error>) {
+        do {
+            try algorithmImporter.convertFrom(result, to: folder)
+            AppLogger.info("Algorithm imported successfully.")
         } catch {
             AppLogger.error(error.localizedDescription)
         }

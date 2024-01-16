@@ -43,6 +43,9 @@ struct AlgorithmListScreen: View {
             .opacity(viewModel.algorithms.isEmpty ? 0 : 1)
             .toolbar {
                 EditButton()
+                Button("", systemImage: "square.and.arrow.up") {
+                    showImporter.toggle()
+                }
             }
         }
         .overlay(alignment: .bottom) {
@@ -52,14 +55,11 @@ struct AlgorithmListScreen: View {
             viewModel.fetchAlgorithms()
         }
         .navigationTitle(viewModel.folder.name)
-        .fileImporter(isPresented: $showImporter, allowedContentTypes: [.mtm]) { result in
-            switch result {
-            case .success:
-                AppLogger.info("Imported successfully")
-            case .failure(let failure):
-                AppLogger.error(failure.localizedDescription)
-            }
-        }
+        .fileImporter(
+            isPresented: $showImporter,
+            allowedContentTypes: [.mtm],
+            onCompletion: viewModel.importAlgorithm
+        )
     }
 }
 

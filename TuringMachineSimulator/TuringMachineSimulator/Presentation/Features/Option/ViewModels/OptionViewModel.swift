@@ -19,12 +19,6 @@ final class OptionViewModel: ObservableObject {
 
     private var cancellables = Set<AnyCancellable>()
 
-//    var destinationStateName: String {
-//        algorithm.states
-//            .filter { $0.id == option.toStateId }
-//            .first?.name ?? "Not found"
-//    }
-
     init(
         sharedStore: OptionSharedStore,
         algorithm: Algorithm,
@@ -36,19 +30,6 @@ final class OptionViewModel: ObservableObject {
         self.combinationRepository = combinationRepository
 
         setupSubscriptions()
-    }
-
-    func setupSubscriptions() {
-        sharedStore.$option
-            .sink { [weak self] updatedOption in
-                withAnimation {
-                    self?.option = updatedOption
-                    self?.destinationStateName = self?.algorithm.states
-                        .filter { $0.id == updatedOption.toStateId }
-                        .first?.name ?? "Not found"
-                }
-            }
-            .store(in: &cancellables)
     }
 
     func fetchOption() {
@@ -63,5 +44,21 @@ final class OptionViewModel: ObservableObject {
         } catch {
             AppLogger.error(error.localizedDescription)
         }
+    }
+}
+
+// MARK: OptionShareStore subscription
+extension OptionViewModel {
+    func setupSubscriptions() {
+        sharedStore.$option
+            .sink { [weak self] updatedOption in
+                withAnimation {
+                    self?.option = updatedOption
+                    self?.destinationStateName = self?.algorithm.states
+                        .filter { $0.id == updatedOption.toStateId }
+                        .first?.name ?? "Not found"
+                }
+            }
+            .store(in: &cancellables)
     }
 }
