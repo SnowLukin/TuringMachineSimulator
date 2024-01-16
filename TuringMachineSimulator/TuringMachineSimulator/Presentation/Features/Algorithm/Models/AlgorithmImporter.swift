@@ -1,5 +1,5 @@
 //
-//  AlgorithmImportHelper.swift
+//  AlgorithmImporter.swift
 //  TestTuringMachine
 //
 //  Created by Snow Lukin on 15.12.2023.
@@ -8,7 +8,7 @@
 import Foundation
 import CoreData
 
-struct AlgorithmImportHelper {
+struct AlgorithmImporter {
 
     private let repository: AlgorithmRepository
 
@@ -16,11 +16,11 @@ struct AlgorithmImportHelper {
         self.repository = repository
     }
 
-    func handleImport(
-        _ result: Result<[URL], Error>,
-        folder: Folder
+    func convertFrom(
+        _ result: Result<URL, Error>,
+        to folder: Folder
     ) throws {
-        guard let selectedFileURL = try result.get().first else {
+        guard let selectedFileURL = try? result.get() else {
             throw ImportError.urlNotFound
         }
 

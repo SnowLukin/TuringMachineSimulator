@@ -24,16 +24,6 @@ final class CombinationListViewModel: ObservableObject {
         setupSubscriptions()
     }
 
-    func setupSubscriptions() {
-        sharedStore.$combinations
-            .sink { [weak self] updatedCombinations in
-                withAnimation {
-                    self?.combinations = updatedCombinations
-                }
-            }
-            .store(in: &cancellables)
-    }
-
     func deleteCombination(_ combination: Combination) {
         do {
             try repository.delete(combination: combination)
@@ -50,5 +40,18 @@ final class CombinationListViewModel: ObservableObject {
         } catch {
             AppLogger.error(error.localizedDescription)
         }
+    }
+}
+
+// MARK: OptionSharedStore subscription
+extension CombinationListViewModel {
+    func setupSubscriptions() {
+        sharedStore.$combinations
+            .sink { [weak self] updatedCombinations in
+                withAnimation {
+                    self?.combinations = updatedCombinations
+                }
+            }
+            .store(in: &cancellables)
     }
 }

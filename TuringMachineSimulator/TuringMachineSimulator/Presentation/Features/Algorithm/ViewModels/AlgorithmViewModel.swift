@@ -36,17 +36,6 @@ final class AlgorithmViewModel: ObservableObject {
         setupSubscriptions()
     }
 
-    private func setupSubscriptions() {
-        sharedStore.$algorithm
-            .sink { [weak self] updatedAlgorithm in
-                withAnimation {
-                    self?.algorithm = updatedAlgorithm
-                    self?.fetchActiveMachineState()
-                }
-            }
-            .store(in: &cancellables)
-    }
-
     func fetchAlgorithm() {
         sharedStore.fetchAlgorithm()
     }
@@ -72,6 +61,20 @@ final class AlgorithmViewModel: ObservableObject {
         } catch {
             AppLogger.error(error.localizedDescription)
         }
+    }
+}
+
+// MARK: AlgorithmSharedStore subscription
+extension AlgorithmViewModel {
+    private func setupSubscriptions() {
+        sharedStore.$algorithm
+            .sink { [weak self] updatedAlgorithm in
+                withAnimation {
+                    self?.algorithm = updatedAlgorithm
+                    self?.fetchActiveMachineState()
+                }
+            }
+            .store(in: &cancellables)
     }
 }
 

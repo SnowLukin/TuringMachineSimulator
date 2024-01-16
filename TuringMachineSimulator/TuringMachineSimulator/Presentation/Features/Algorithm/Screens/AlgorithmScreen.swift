@@ -64,6 +64,13 @@ struct AlgorithmScreen: View {
                 }
             }
         }
+        .toolbar {
+            Button {
+                showExport.toggle()
+            } label: {
+                Image(systemName: "square.and.arrow.up")
+            }
+        }
         .fileExporter(
             isPresented: $showExport,
             document: viewModel.documentManager,
@@ -114,5 +121,7 @@ extension AlgorithmScreen {
 
 #Preview {
     let algorithm = Algorithm.sample
-    return AlgorithmScreen(algorithm: algorithm)
+    return NavigationStack {
+        AlgorithmScreen(algorithm: algorithm)
+    }
 }

@@ -18,7 +18,7 @@
 		D70DC4E92B4ED06600C643E0 /* AlgorithmListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC4692B4ED06500C643E0 /* AlgorithmListScreen.swift */; };
 		D70DC4EA2B4ED06600C643E0 /* ActiveStateListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC46A2B4ED06500C643E0 /* ActiveStateListView.swift */; };
 		D70DC4EB2B4ED06600C643E0 /* NewAlgorithmButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC46B2B4ED06500C643E0 /* NewAlgorithmButton.swift */; };
-		D70DC4EC2B4ED06600C643E0 /* AlgorithmImportHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC46D2B4ED06500C643E0 /* AlgorithmImportHelper.swift */; };
+		D70DC4EC2B4ED06600C643E0 /* AlgorithmImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC46D2B4ED06500C643E0 /* AlgorithmImporter.swift */; };
 		D70DC4ED2B4ED06600C643E0 /* CombinationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC4702B4ED06500C643E0 /* CombinationListViewModel.swift */; };
 		D70DC4EE2B4ED06600C643E0 /* CombinationConfigListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC4722B4ED06500C643E0 /* CombinationConfigListView.swift */; };
 		D70DC4EF2B4ED06600C643E0 /* CombinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC4732B4ED06500C643E0 /* CombinationView.swift */; };
@@ -116,7 +116,7 @@
 		D70DC4692B4ED06500C643E0 /* AlgorithmListScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlgorithmListScreen.swift; sourceTree = "<group>"; };
 		D70DC46A2B4ED06500C643E0 /* ActiveStateListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveStateListView.swift; sourceTree = "<group>"; };
 		D70DC46B2B4ED06500C643E0 /* NewAlgorithmButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewAlgorithmButton.swift; sourceTree = "<group>"; };
-		D70DC46D2B4ED06500C643E0 /* AlgorithmImportHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlgorithmImportHelper.swift; sourceTree = "<group>"; };
+		D70DC46D2B4ED06500C643E0 /* AlgorithmImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlgorithmImporter.swift; sourceTree = "<group>"; };
 		D70DC4702B4ED06500C643E0 /* CombinationListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CombinationListViewModel.swift; sourceTree = "<group>"; };
 		D70DC4722B4ED06500C643E0 /* CombinationConfigListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CombinationConfigListView.swift; sourceTree = "<group>"; };
 		D70DC4732B4ED06500C643E0 /* CombinationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CombinationView.swift; sourceTree = "<group>"; };
@@ -639,7 +639,6 @@
 				D7B0349028BCF37400F3B135 /* Info.plist */,
 				D7E8A85F28B56F2200F40736 /* TuringMachineSimulatorApp.swift */,
 				D7544BA328BE6657003DFB12 /* LogoView.swift */,
-				D7B0349128BCF41500F3B135 /* DocumentManager.swift */,
 				D70DC4CB2B4ED06600C643E0 /* Core */,
 				D70DC4A52B4ED06500C643E0 /* Data */,
 				D70DC4B92B4ED06600C643E0 /* Domain */,
@@ -687,7 +686,8 @@
 		D7F896522B569DE800835D8C /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				D70DC46D2B4ED06500C643E0 /* AlgorithmImportHelper.swift */,
+				D7B0349128BCF41500F3B135 /* DocumentManager.swift */,
+				D70DC46D2B4ED06500C643E0 /* AlgorithmImporter.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -851,7 +851,7 @@
 				D70DC4E52B4ED06600C643E0 /* AlgorithmListScreenViewModel.swift in Sources */,
 				D70DC4FD2B4ED06600C643E0 /* FolderListScreen.swift in Sources */,
 				D70DC52D2B4ED06600C643E0 /* Resolver+ViewModels.swift in Sources */,
-				D70DC4EC2B4ED06600C643E0 /* AlgorithmImportHelper.swift in Sources */,
+				D70DC4EC2B4ED06600C643E0 /* AlgorithmImporter.swift in Sources */,
 				D70DC5242B4ED06600C643E0 /* FakeTapeRepository.swift in Sources */,
 				D70DC4F52B4ED06600C643E0 /* OptionDestinationMachineStateViewModel.swift in Sources */,
 				D70DC5102B4ED06600C643E0 /* OptionRepository.swift in Sources */,

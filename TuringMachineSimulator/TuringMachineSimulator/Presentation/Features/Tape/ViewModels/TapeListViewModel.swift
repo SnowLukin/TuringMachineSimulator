@@ -27,6 +27,22 @@ final class TapeListViewModel: ObservableObject {
         setupSubscriptions()
     }
 
+    func updateTapeHeadIndex(_ tape: Tape, newHeadIndex: Int) {
+        let updatedTape = tape.copyUpdated(
+            headIndex: newHeadIndex,
+            workingHeadIndex: newHeadIndex
+        )
+        do {
+            try repository.update(tape: updatedTape)
+            sharedStore.fetchAlgorithm()
+        } catch {
+            AppLogger.error(error.localizedDescription)
+        }
+    }
+}
+
+// MARK: AlgorithmShareStore subscription
+extension TapeListViewModel {
     private func setupSubscriptions() {
         sharedStore.$algorithm
             .sink { [weak self] updatedAlgorithm in
@@ -43,18 +59,5 @@ final class TapeListViewModel: ObservableObject {
                 }
             }
             .store(in: &cancellables)
-    }
-
-    func updateTapeHeadIndex(_ tape: Tape, newHeadIndex: Int) {
-        let updatedTape = tape.copyUpdated(
-            headIndex: newHeadIndex,
-            workingHeadIndex: newHeadIndex
-        )
-        do {
-            try repository.update(tape: updatedTape)
-            sharedStore.fetchAlgorithm()
-        } catch {
-            AppLogger.error(error.localizedDescription)
-        }
     }
 }
