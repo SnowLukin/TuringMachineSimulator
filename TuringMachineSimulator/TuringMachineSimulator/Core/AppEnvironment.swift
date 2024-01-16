@@ -16,4 +16,4 @@ enum AppEnvironment {
 }
 
 /// Global environment variable
-let environment: AppEnvironment = .development
+let environment: AppEnvironment = .production
