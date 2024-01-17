@@ -97,7 +97,6 @@
 		D70DC53A2B4ED06600C643E0 /* TuringMachineCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D70DC4DE2B4ED06600C643E0 /* TuringMachineCoreData.xcdatamodeld */; };
 		D70DC53B2B4ED06600C643E0 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC4E02B4ED06600C643E0 /* AppEnvironment.swift */; };
 		D70DC53E2B4ED49A00C643E0 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = D70DC53D2B4ED49A00C643E0 /* Swinject */; };
-		D7544BA428BE6657003DFB12 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7544BA328BE6657003DFB12 /* LogoView.swift */; };
 		D7B0349228BCF41500F3B135 /* DocumentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B0349128BCF41500F3B135 /* DocumentManager.swift */; };
 		D7E8A86028B56F2200F40736 /* TuringMachineSimulatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E8A85F28B56F2200F40736 /* TuringMachineSimulatorApp.swift */; };
 		D7E8A86428B56F2C00F40736 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7E8A86328B56F2C00F40736 /* Assets.xcassets */; };
@@ -194,7 +193,6 @@
 		D70DC4DD2B4ED06600C643E0 /* PersistenceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		D70DC4DF2B4ED06600C643E0 /* TestTuringMachine.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TestTuringMachine.xcdatamodel; sourceTree = "<group>"; };
 		D70DC4E02B4ED06600C643E0 /* AppEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
-		D7544BA328BE6657003DFB12 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 		D7B0349028BCF37400F3B135 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D7B0349128BCF41500F3B135 /* DocumentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentManager.swift; sourceTree = "<group>"; };
 		D7E8A85C28B56F2200F40736 /* TuringMachineSimulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TuringMachineSimulator.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -640,7 +638,6 @@
 			children = (
 				D7B0349028BCF37400F3B135 /* Info.plist */,
 				D7E8A85F28B56F2200F40736 /* TuringMachineSimulatorApp.swift */,
-				D7544BA328BE6657003DFB12 /* LogoView.swift */,
 				D70DC4CB2B4ED06600C643E0 /* Core */,
 				D70DC4A52B4ED06500C643E0 /* Data */,
 				D70DC4B92B4ED06600C643E0 /* Domain */,
@@ -885,7 +882,6 @@
 				D70DC5302B4ED06600C643E0 /* Resolver+Repositories.swift in Sources */,
 				D70DC5392B4ED06600C643E0 /* PersistenceController.swift in Sources */,
 				D70DC51B2B4ED06600C643E0 /* Direction.swift in Sources */,
-				D7544BA428BE6657003DFB12 /* LogoView.swift in Sources */,
 				D70DC5152B4ED06600C643E0 /* Option.swift in Sources */,
 				D70DC5032B4ED06600C643E0 /* TapeListView.swift in Sources */,
 				D70DC5112B4ED06600C643E0 /* TapeRepository.swift in Sources */,

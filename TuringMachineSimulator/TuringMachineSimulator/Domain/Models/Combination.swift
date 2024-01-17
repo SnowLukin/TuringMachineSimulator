@@ -29,13 +29,14 @@ extension Combination {
         self.direction = .stay
     }
 
-    func copyUpdated(
+    func copy(
+        id: String? = nil,
         fromChar: String? = nil,
         toChar: String? = nil,
         direction: Direction? = nil
     ) -> Combination {
         Combination(
-            id: self.id,
+            id: id ?? self.id,
             fromChar: fromChar ?? self.fromChar,
             toChar: toChar ?? self.toChar,
             direction: direction ?? self.direction

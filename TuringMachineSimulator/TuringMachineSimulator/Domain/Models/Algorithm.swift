@@ -51,6 +51,7 @@ extension Algorithm {
     }
 
     func copy(
+        id: String? = nil,
         name: String? = nil,
         algDescription: String? = nil,
         createdDate: Date? = nil,
@@ -61,7 +62,7 @@ extension Algorithm {
         states: [MachineState]? = nil
     ) -> Algorithm {
         Algorithm(
-            id: self.id,
+            id: id ?? self.id,
             name: name ?? self.name,
             algDescription: algDescription ?? self.algDescription,
             createdDate: createdDate ?? self.createdDate,

@@ -47,7 +47,8 @@ extension Tape {
 }
 
 extension Tape {
-    func copyUpdated(
+    func copy(
+        id: String? = nil,
         name: String? = nil,
         input: String? = nil,
         workingInput: String? = nil,
@@ -69,7 +70,7 @@ extension Tape {
             finalWorkingInput = self.workingInput
         }
         return Tape(
-            id: self.id,
+            id: id ?? self.id,
             name: name ?? self.name,
             input: finalInput,
             workingInput: finalWorkingInput,

@@ -94,7 +94,7 @@ extension AlgorithmViewModel {
             pauseAutoSteps()
             var resetedTapes: [Tape] = []
             for tape in algorithm.tapes {
-                let updatedTape = tape.copyUpdated(
+                let updatedTape = tape.copy(
                     workingInput: tape.input,
                     workingHeadIndex: tape.headIndex,
                     includePadding: false
@@ -127,7 +127,7 @@ extension AlgorithmViewModel {
 
         // Finding fitting option
         guard let chosenOption = findOption(matching: currentOptionCombination, from: state) else {
-            AppLogger.info("Couldn't find correct option. Skipping the step.")
+            AppLogger.info("Couldn't find correct option. Skipping the step. Current state: \(state.name)")
             pauseAutoSteps()
             return
         }
@@ -194,7 +194,7 @@ extension AlgorithmViewModel {
             input: workingInput,
             direction: combination.direction
         )
-        return tape.copyUpdated(
+        return tape.copy(
             workingInput: workingInput,
             workingHeadIndex: updatedWorkingHeadIndex,
             includePadding: false

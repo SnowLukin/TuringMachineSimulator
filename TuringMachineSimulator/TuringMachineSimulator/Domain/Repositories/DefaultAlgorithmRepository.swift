@@ -157,6 +157,11 @@ final class DefaultAlgorithmRepository: AlgorithmRepository {
             let algorithmEntity = CDAlgorithm(context: context)
             algorithmEntity.id = algorithm.id
             algorithmEntity.name = algorithm.name
+            algorithmEntity.algDescription = algorithm.algDescription
+            algorithmEntity.activeStateId = algorithm.activeStateId
+            algorithmEntity.startingStateId = algorithm.startingStateId
+            algorithmEntity.lastEditDate = algorithm.lastEditDate
+            algorithmEntity.createdDate = algorithm.createdDate
 
             try algorithm.tapes.forEach { tape in
                 try tapeRepository.save(tape: tape, algorithm: algorithm)

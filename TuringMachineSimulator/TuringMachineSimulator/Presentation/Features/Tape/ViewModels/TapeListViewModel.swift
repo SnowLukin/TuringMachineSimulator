@@ -28,7 +28,7 @@ final class TapeListViewModel: ObservableObject {
     }
 
     func updateTapeHeadIndex(_ tape: Tape, newHeadIndex: Int) {
-        let updatedTape = tape.copyUpdated(
+        let updatedTape = tape.copy(
             headIndex: newHeadIndex,
             workingHeadIndex: newHeadIndex
         )

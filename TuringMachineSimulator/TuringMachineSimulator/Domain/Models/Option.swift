@@ -28,12 +28,13 @@ extension Option {
         combinations = entity.unwrappedCombinations.map { Combination(entity: $0) }
     }
 
-    func copyUpdated(
+    func copy(
+        id: String? = nil,
         toStateId: String? = nil,
         combinations: [Combination]? = nil
     ) -> Option {
         Option(
-            id: self.id,
+            id: id ?? self.id,
             toStateId: toStateId ?? self.toStateId,
             combinations: combinations ?? self.combinations
         )

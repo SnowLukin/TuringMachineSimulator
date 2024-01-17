@@ -48,7 +48,7 @@ final class TapeConfigListViewModel: ObservableObject {
 
     func updateTapeWithInput(_ tape: Tape, newInput: String) {
         let trimmedInput = newInput.trim("_")
-        let updatedTape = tape.copyUpdated(
+        let updatedTape = tape.copy(
             input: trimmedInput,
             workingInput: trimmedInput
         )

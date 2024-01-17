@@ -24,7 +24,7 @@ struct AlgorithmListScreen: View {
             EmptyFolderMessageView()
                 .alignVertically(.center)
                 .padding(.bottom, 40)
-                .opacity(viewModel.algorithms.isEmpty ? 1 : 0)
+                .opacity(viewModel.algorithms.isEmpty && !viewModel.showLoader ? 1 : 0)
 
             List {
                 ForEach(viewModel.filteredAlgorithms) { algorithm in
@@ -42,18 +42,25 @@ struct AlgorithmListScreen: View {
             .searchable(text: $viewModel.searchText)
             .opacity(viewModel.algorithms.isEmpty ? 0 : 1)
             .toolbar {
-                EditButton()
-                Button("", systemImage: "square.and.arrow.up") {
+                Button("", systemImage: "square.and.arrow.down") {
                     showImporter.toggle()
                 }
+                EditButton()
             }
         }
         .overlay(alignment: .bottom) {
             NewAlgorithmButton(action: viewModel.createAlgorithm)
         }
+        .overlay {
+            if viewModel.showLoader {
+                ProgressView("Importing Algorithm")
+            }
+        }
+        .disabled(viewModel.showLoader)
         .onAppear {
             viewModel.fetchAlgorithms()
         }
+        .navigationBarBackButtonHidden(viewModel.showLoader)
         .navigationTitle(viewModel.folder.name)
         .fileImporter(
             isPresented: $showImporter,

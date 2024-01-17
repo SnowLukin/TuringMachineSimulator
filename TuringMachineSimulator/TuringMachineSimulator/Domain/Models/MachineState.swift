@@ -19,6 +19,10 @@ extension MachineState {
         name = entity.name.withDefaultValue("NAN")
         options = entity.unwrappedOptions.map { Option(entity: $0) }
     }
+
+    func copy(id: String? = nil, name: String? = nil, options: [Option]? = nil) -> MachineState {
+        MachineState(id: id ?? self.id, name: name ?? self.name, options: options ?? self.options)
+    }
 }
 
 extension MachineState {

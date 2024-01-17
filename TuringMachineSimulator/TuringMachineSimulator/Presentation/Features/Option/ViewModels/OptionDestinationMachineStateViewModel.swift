@@ -47,7 +47,7 @@ final class OptionDestinationMachineStateViewModel: ObservableObject {
     }
 
     func updateDestinationState(stateId: String) {
-        let updatedOption = option.copyUpdated(toStateId: stateId)
+        let updatedOption = option.copy(toStateId: stateId)
         do {
             try optionRepository.update(option: updatedOption)
             destinationStateId = stateId
