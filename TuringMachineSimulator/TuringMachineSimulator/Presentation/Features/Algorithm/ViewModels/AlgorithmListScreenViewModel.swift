@@ -13,6 +13,8 @@ final class AlgorithmListScreenViewModel: ObservableObject {
     @Published var algorithms: [Algorithm] = []
     @Published var searchText = ""
 
+    @Published var showLoader = false
+
     var filteredAlgorithms: [Algorithm] {
         searchText.isEmpty
         ? algorithms
@@ -59,11 +61,21 @@ final class AlgorithmListScreenViewModel: ObservableObject {
     }
 
     func importAlgorithm(_ result: Result<URL, Error>) {
+        withAnimation {
+            showLoader = true
+        }
         do {
             try algorithmImporter.convertFrom(result, to: folder)
+            withAnimation {
+                fetchAlgorithms()
+                showLoader = false
+            }
             AppLogger.info("Algorithm imported successfully.")
         } catch {
             AppLogger.error(error.localizedDescription)
+            withAnimation {
+                showLoader = false
+            }
         }
     }
 }

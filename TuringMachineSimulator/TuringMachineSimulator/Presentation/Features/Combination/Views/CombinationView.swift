@@ -36,7 +36,7 @@ struct CombinationView: View {
                     Button {
                         withAnimation {
                             currentDirection = direction
-                            onUpdate(combination.copyUpdated(direction: direction))
+                            onUpdate(combination.copy(direction: direction))
                         }
                     } label: {
                         Label {
@@ -59,12 +59,12 @@ struct CombinationView: View {
         .onChange(of: fromChar) { newValue in
             fromChar = newValue.limitToOne()
             let newValue = newValue.limitToOne()
-            onUpdate(combination.copyUpdated(fromChar: newValue))
+            onUpdate(combination.copy(fromChar: newValue))
         }
         .onChange(of: toChar) { newValue in
             toChar = newValue.limitToOne()
             let newValue = newValue.limitToOne()
-            onUpdate(combination.copyUpdated(toChar: newValue))
+            onUpdate(combination.copy(toChar: newValue))
         }
     }
 }

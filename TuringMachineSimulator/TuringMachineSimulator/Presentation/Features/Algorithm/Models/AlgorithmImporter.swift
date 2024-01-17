@@ -34,14 +34,38 @@ struct AlgorithmImporter {
             guard let algorithm = try? JSONDecoder().decode(Algorithm.self, from: data) else {
                 throw ImportError.decodingError
             }
-
+            // Creating news id to avoid matching with existing instances
+            let modifiedAlgorithm = updateIds(algorithm: algorithm)
             do {
-                try repository.save(algorithm: algorithm, folder: folder)
+                try repository.save(algorithm: modifiedAlgorithm, folder: folder)
             } catch {
                 throw ImportError.other(error)
             }
         } else {
             throw ImportError.securityScopeAccessError
         }
+    }
+
+    private func updateIds(algorithm: Algorithm) -> Algorithm {
+        let stateUpdatedIdsMap = Dictionary(uniqueKeysWithValues: algorithm.states.map { ($0.id, UUID().uuidString) })
+        let modifiedStates = algorithm.states.map { state in
+            state.copy(
+                id: stateUpdatedIdsMap[state.id] ?? "",
+                options: state.options.map {
+                    $0.copy(
+                        id: UUID().uuidString,
+                        toStateId: stateUpdatedIdsMap[$0.toStateId] ?? "",
+                        combinations: $0.combinations.map { $0.copy(id: UUID().uuidString) }
+                    )
+                }
+            )
+        }
+        return algorithm.copy(
+            id: UUID().uuidString,
+            startingStateId: stateUpdatedIdsMap[algorithm.startingStateId] ?? "",
+            activeStateId: stateUpdatedIdsMap[algorithm.activeStateId] ?? "",
+            tapes: algorithm.tapes.map { $0.copy(id: UUID().uuidString, includePadding: false) },
+            states: modifiedStates
+        )
     }
 }
