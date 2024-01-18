@@ -1,5 +1,5 @@
 //
-//  OptionDestinationMachineStateView.swift
+//  OptionDestinationMachineStateScreen.swift
 //  TestTuringMachine
 //
 //  Created by Snow Lukin on 24.12.2023.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct OptionDestinationMachineStateView: View {
+struct OptionDestinationMachineStateScreen: View {
 
     @StateObject var viewModel: OptionDestinationMachineStateViewModel
 

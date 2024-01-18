@@ -41,9 +41,11 @@ final class Coordinator: ObservableObject {
         case .option(let option, let algorithm):
             OptionScreen(option: option, algorithm: algorithm)
         case .optionDestinationState(let option, let algorithm):
-            OptionDestinationMachineStateView(option: option, algorithm: algorithm)
+            OptionDestinationMachineStateScreen(option: option, algorithm: algorithm)
         case .activeStateList(let algorithm):
-            ActiveStateListView(algorithm: algorithm)
+            ActiveStateListScreen(algorithm: algorithm)
+        case .algorithmInfo(let algorithm):
+            AlgorithmInfoScreen(algorithm: algorithm)
         }
     }
 }

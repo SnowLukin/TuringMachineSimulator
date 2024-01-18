@@ -16,7 +16,7 @@
 		D70DC4E72B4ED06600C643E0 /* AlgorithmCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC4672B4ED06500C643E0 /* AlgorithmCellView.swift */; };
 		D70DC4E82B4ED06600C643E0 /* EmptyFolderMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC4682B4ED06500C643E0 /* EmptyFolderMessageView.swift */; };
 		D70DC4E92B4ED06600C643E0 /* AlgorithmListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC4692B4ED06500C643E0 /* AlgorithmListScreen.swift */; };
-		D70DC4EA2B4ED06600C643E0 /* ActiveStateListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC46A2B4ED06500C643E0 /* ActiveStateListView.swift */; };
+		D70DC4EA2B4ED06600C643E0 /* ActiveStateListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC46A2B4ED06500C643E0 /* ActiveStateListScreen.swift */; };
 		D70DC4EB2B4ED06600C643E0 /* NewAlgorithmButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC46B2B4ED06500C643E0 /* NewAlgorithmButton.swift */; };
 		D70DC4EC2B4ED06600C643E0 /* AlgorithmImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC46D2B4ED06500C643E0 /* AlgorithmImporter.swift */; };
 		D70DC4ED2B4ED06600C643E0 /* CombinationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC4702B4ED06500C643E0 /* CombinationListViewModel.swift */; };
@@ -31,7 +31,7 @@
 		D70DC4F62B4ED06600C643E0 /* OptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC47F2B4ED06500C643E0 /* OptionViewModel.swift */; };
 		D70DC4F72B4ED06600C643E0 /* OptionListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC4812B4ED06500C643E0 /* OptionListScreen.swift */; };
 		D70DC4F82B4ED06600C643E0 /* OptionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC4822B4ED06500C643E0 /* OptionScreen.swift */; };
-		D70DC4F92B4ED06600C643E0 /* OptionDestinationMachineStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC4832B4ED06500C643E0 /* OptionDestinationMachineStateView.swift */; };
+		D70DC4F92B4ED06600C643E0 /* OptionDestinationMachineStateScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC4832B4ED06500C643E0 /* OptionDestinationMachineStateScreen.swift */; };
 		D70DC4FA2B4ED06600C643E0 /* FolderListScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC4862B4ED06500C643E0 /* FolderListScreenViewModel.swift */; };
 		D70DC4FB2B4ED06600C643E0 /* NewFolderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC4882B4ED06500C643E0 /* NewFolderButton.swift */; };
 		D70DC4FC2B4ED06600C643E0 /* FolderCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC4892B4ED06500C643E0 /* FolderCellView.swift */; };
@@ -97,6 +97,8 @@
 		D70DC53A2B4ED06600C643E0 /* TuringMachineCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D70DC4DE2B4ED06600C643E0 /* TuringMachineCoreData.xcdatamodeld */; };
 		D70DC53B2B4ED06600C643E0 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC4E02B4ED06600C643E0 /* AppEnvironment.swift */; };
 		D70DC53E2B4ED49A00C643E0 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = D70DC53D2B4ED49A00C643E0 /* Swinject */; };
+		D769C8652B594542007E8375 /* AlgorithmInfoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D769C8642B594542007E8375 /* AlgorithmInfoScreen.swift */; };
+		D769C8672B5947A4007E8375 /* AlgorithmInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D769C8662B5947A4007E8375 /* AlgorithmInfoViewModel.swift */; };
 		D7B0349228BCF41500F3B135 /* DocumentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B0349128BCF41500F3B135 /* DocumentManager.swift */; };
 		D7E8A86028B56F2200F40736 /* TuringMachineSimulatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E8A85F28B56F2200F40736 /* TuringMachineSimulatorApp.swift */; };
 		D7E8A86428B56F2C00F40736 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7E8A86328B56F2C00F40736 /* Assets.xcassets */; };
@@ -113,7 +115,7 @@
 		D70DC4672B4ED06500C643E0 /* AlgorithmCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlgorithmCellView.swift; sourceTree = "<group>"; };
 		D70DC4682B4ED06500C643E0 /* EmptyFolderMessageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyFolderMessageView.swift; sourceTree = "<group>"; };
 		D70DC4692B4ED06500C643E0 /* AlgorithmListScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlgorithmListScreen.swift; sourceTree = "<group>"; };
-		D70DC46A2B4ED06500C643E0 /* ActiveStateListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveStateListView.swift; sourceTree = "<group>"; };
+		D70DC46A2B4ED06500C643E0 /* ActiveStateListScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveStateListScreen.swift; sourceTree = "<group>"; };
 		D70DC46B2B4ED06500C643E0 /* NewAlgorithmButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewAlgorithmButton.swift; sourceTree = "<group>"; };
 		D70DC46D2B4ED06500C643E0 /* AlgorithmImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlgorithmImporter.swift; sourceTree = "<group>"; };
 		D70DC4702B4ED06500C643E0 /* CombinationListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CombinationListViewModel.swift; sourceTree = "<group>"; };
@@ -128,7 +130,7 @@
 		D70DC47F2B4ED06500C643E0 /* OptionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionViewModel.swift; sourceTree = "<group>"; };
 		D70DC4812B4ED06500C643E0 /* OptionListScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionListScreen.swift; sourceTree = "<group>"; };
 		D70DC4822B4ED06500C643E0 /* OptionScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionScreen.swift; sourceTree = "<group>"; };
-		D70DC4832B4ED06500C643E0 /* OptionDestinationMachineStateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionDestinationMachineStateView.swift; sourceTree = "<group>"; };
+		D70DC4832B4ED06500C643E0 /* OptionDestinationMachineStateScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionDestinationMachineStateScreen.swift; sourceTree = "<group>"; };
 		D70DC4862B4ED06500C643E0 /* FolderListScreenViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderListScreenViewModel.swift; sourceTree = "<group>"; };
 		D70DC4882B4ED06500C643E0 /* NewFolderButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewFolderButton.swift; sourceTree = "<group>"; };
 		D70DC4892B4ED06500C643E0 /* FolderCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderCellView.swift; sourceTree = "<group>"; };
@@ -193,6 +195,8 @@
 		D70DC4DD2B4ED06600C643E0 /* PersistenceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		D70DC4DF2B4ED06600C643E0 /* TestTuringMachine.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TestTuringMachine.xcdatamodel; sourceTree = "<group>"; };
 		D70DC4E02B4ED06600C643E0 /* AppEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		D769C8642B594542007E8375 /* AlgorithmInfoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmInfoScreen.swift; sourceTree = "<group>"; };
+		D769C8662B5947A4007E8375 /* AlgorithmInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmInfoViewModel.swift; sourceTree = "<group>"; };
 		D7B0349028BCF37400F3B135 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D7B0349128BCF41500F3B135 /* DocumentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentManager.swift; sourceTree = "<group>"; };
 		D7E8A85C28B56F2200F40736 /* TuringMachineSimulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TuringMachineSimulator.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -329,7 +333,6 @@
 			children = (
 				D70DC47C2B4ED06500C643E0 /* ViewModels */,
 				D7F896552B56A28700835D8C /* Screens */,
-				D70DC4802B4ED06500C643E0 /* Views */,
 			);
 			path = Option;
 			sourceTree = "<group>";
@@ -342,14 +345,6 @@
 				D70DC47F2B4ED06500C643E0 /* OptionViewModel.swift */,
 			);
 			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		D70DC4802B4ED06500C643E0 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				D70DC4832B4ED06500C643E0 /* OptionDestinationMachineStateView.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		D70DC4842B4ED06500C643E0 /* Folder */ = {
@@ -445,6 +440,7 @@
 				D70DC4642B4ED06500C643E0 /* AlgorithmListScreenViewModel.swift */,
 				D70DC4652B4ED06500C643E0 /* ActiveStateListViewModel.swift */,
 				D70DC49D2B4ED06500C643E0 /* AlgorithmViewModel.swift */,
+				D769C8662B5947A4007E8375 /* AlgorithmInfoViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -454,7 +450,6 @@
 			children = (
 				D70DC4672B4ED06500C643E0 /* AlgorithmCellView.swift */,
 				D70DC4682B4ED06500C643E0 /* EmptyFolderMessageView.swift */,
-				D70DC46A2B4ED06500C643E0 /* ActiveStateListView.swift */,
 				D70DC46B2B4ED06500C643E0 /* NewAlgorithmButton.swift */,
 				D70DC4A12B4ED06500C643E0 /* PlayStackView.swift */,
 				D70DC4A22B4ED06500C643E0 /* ConfigurationsView.swift */,
@@ -678,6 +673,8 @@
 			children = (
 				D70DC4692B4ED06500C643E0 /* AlgorithmListScreen.swift */,
 				D70DC4A02B4ED06500C643E0 /* AlgorithmScreen.swift */,
+				D769C8642B594542007E8375 /* AlgorithmInfoScreen.swift */,
+				D70DC46A2B4ED06500C643E0 /* ActiveStateListScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -712,6 +709,7 @@
 			children = (
 				D70DC4812B4ED06500C643E0 /* OptionListScreen.swift */,
 				D70DC4822B4ED06500C643E0 /* OptionScreen.swift */,
+				D70DC4832B4ED06500C643E0 /* OptionDestinationMachineStateScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -826,6 +824,7 @@
 				D70DC5272B4ED06600C643E0 /* FakeAlgorithmRepository.swift in Sources */,
 				D70DC5052B4ED06600C643E0 /* TapeComponentsLineView.swift in Sources */,
 				D70DC4F02B4ED06600C643E0 /* MachineStateListViewModel.swift in Sources */,
+				D769C8652B594542007E8375 /* AlgorithmInfoScreen.swift in Sources */,
 				D70DC4E22B4ED06600C643E0 /* CirclyModifier.swift in Sources */,
 				D70DC4F72B4ED06600C643E0 /* OptionListScreen.swift in Sources */,
 				D70DC50B2B4ED06600C643E0 /* AlgorithmScreen.swift in Sources */,
@@ -835,7 +834,7 @@
 				D70DC4FA2B4ED06600C643E0 /* FolderListScreenViewModel.swift in Sources */,
 				D70DC5282B4ED06600C643E0 /* FakeFolderRepository.swift in Sources */,
 				D70DC5012B4ED06600C643E0 /* TapeListViewModel.swift in Sources */,
-				D70DC4F92B4ED06600C643E0 /* OptionDestinationMachineStateView.swift in Sources */,
+				D70DC4F92B4ED06600C643E0 /* OptionDestinationMachineStateScreen.swift in Sources */,
 				D70DC5202B4ED06600C643E0 /* DefaultFolderRepository.swift in Sources */,
 				D70DC5312B4ED06600C643E0 /* AppLogger.swift in Sources */,
 				D70DC4F62B4ED06600C643E0 /* OptionViewModel.swift in Sources */,
@@ -864,7 +863,7 @@
 				D70DC5212B4ED06600C643E0 /* DefaultMachineStateRepository.swift in Sources */,
 				D70DC4E42B4ED06600C643E0 /* TextFieldAlert.swift in Sources */,
 				D70DC5162B4ED06600C643E0 /* Folder.swift in Sources */,
-				D70DC4EA2B4ED06600C643E0 /* ActiveStateListView.swift in Sources */,
+				D70DC4EA2B4ED06600C643E0 /* ActiveStateListScreen.swift in Sources */,
 				D70DC5172B4ED06600C643E0 /* Algorithm.swift in Sources */,
 				D7B0349228BCF41500F3B135 /* DocumentManager.swift in Sources */,
 				D70DC4F32B4ED06600C643E0 /* OptionSharedStore.swift in Sources */,
@@ -900,6 +899,7 @@
 				D7E8A86028B56F2200F40736 /* TuringMachineSimulatorApp.swift in Sources */,
 				D70DC5192B4ED06600C643E0 /* Tape.swift in Sources */,
 				D70DC4E62B4ED06600C643E0 /* ActiveStateListViewModel.swift in Sources */,
+				D769C8672B5947A4007E8375 /* AlgorithmInfoViewModel.swift in Sources */,
 				D70DC5082B4ED06600C643E0 /* TapeConfigListScreen.swift in Sources */,
 				D70DC51F2B4ED06600C643E0 /* DefaultAlgorithmRepository.swift in Sources */,
 				D70DC4EE2B4ED06600C643E0 /* CombinationConfigListView.swift in Sources */,

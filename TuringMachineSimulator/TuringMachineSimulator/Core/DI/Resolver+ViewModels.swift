@@ -43,6 +43,11 @@ extension Resolver {
                 machineStateRepository: machineStateRepository
             )
         }
+
+        container.register(AlgorithmInfoViewModel.self) { r, algorithm in
+            let repository = r.resolve(AlgorithmRepository.self)!
+            return AlgorithmInfoViewModel(algorithm: algorithm, repository: repository)
+        }
     }
 
     private func injectTapeViewModels() {

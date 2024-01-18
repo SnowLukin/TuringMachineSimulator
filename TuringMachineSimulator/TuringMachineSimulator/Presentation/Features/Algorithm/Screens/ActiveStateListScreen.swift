@@ -1,5 +1,5 @@
 //
-//  ActiveStateListView.swift
+//  ActiveStateListScreen.swift
 //  TestTuringMachine
 //
 //  Created by Snow Lukin on 27.12.2023.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ActiveStateListView: View {
+struct ActiveStateListScreen: View {
 
     @StateObject var viewModel: ActiveStateListViewModel
 

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct AlgorithmScreen: View {
 
+    @EnvironmentObject var coordinator: Coordinator
     @StateObject var viewModel: AlgorithmViewModel
 
     @State var showSettings = false
@@ -69,6 +70,9 @@ struct AlgorithmScreen: View {
                 showExport.toggle()
             } label: {
                 Image(systemName: "square.and.arrow.up")
+            }
+            Button("", systemImage: "info.circle") {
+                coordinator.push(.algorithmInfo(viewModel.algorithm))
             }
         }
         .fileExporter(

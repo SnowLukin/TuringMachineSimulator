@@ -17,6 +17,7 @@ enum Page: Identifiable {
     case option(Option, Algorithm)
     case optionDestinationState(Option, Algorithm)
     case activeStateList(Algorithm)
+    case algorithmInfo(Algorithm)
 
     var id: String {
         switch self {
@@ -38,6 +39,8 @@ enum Page: Identifiable {
             "optionDestinationState"
         case .activeStateList:
             "activeStateList"
+        case .algorithmInfo:
+            "algorithmInfo"
         }
     }
 }
