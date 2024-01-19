@@ -12,7 +12,7 @@ final class FakeTapeRepository: TapeRepository {
 
     private var tapes: [Tape]
 
-    init(tapes: [Tape] = [Tape.sample]) {
+    init(tapes: [Tape] = Tape.samples) {
         self.tapes = tapes
     }
 

@@ -12,7 +12,7 @@ final class FakeOptionRepository: OptionRepository {
 
     private var options: [Option]
 
-    init(options: [Option] = [Option.sample()]) {
+    init(options: [Option] = Option.samples()) {
         self.options = options
     }
 

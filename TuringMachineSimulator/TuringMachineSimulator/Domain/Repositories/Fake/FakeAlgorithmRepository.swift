@@ -12,7 +12,7 @@ final class FakeAlgorithmRepository: AlgorithmRepository {
 
     private var algorithms: [Algorithm]
 
-    init(algorithms: [Algorithm] = [Algorithm.sample]) {
+    init(algorithms: [Algorithm] = Algorithm.samples) {
         self.algorithms = algorithms
     }
 

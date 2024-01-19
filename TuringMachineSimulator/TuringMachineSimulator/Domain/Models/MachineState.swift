@@ -29,4 +29,12 @@ extension MachineState {
     static func sample(withId id: String = UUID().uuidString) -> MachineState {
         MachineState(id: id, name: "Sample State", options: [Option.sample(machineStateId: id)])
     }
+
+    static func samples(withId id: String = UUID().uuidString) -> [MachineState] {
+        [
+            MachineState(id: id, name: "State 1", options: Option.samples(machineStateId: id)),
+            MachineState(id: UUID().uuidString, name: "State 2", options: Option.samples(machineStateId: id)),
+            MachineState(id: UUID().uuidString, name: "State 3", options: Option.samples(machineStateId: id))
+        ]
+    }
 }

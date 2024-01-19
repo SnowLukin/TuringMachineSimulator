@@ -45,4 +45,12 @@ extension Option {
     static func sample(machineStateId: String = "") -> Option {
         Option(id: UUID().uuidString, toStateId: machineStateId, combinations: [Combination.sample])
     }
+
+    static func samples(machineStateId: String = "") -> [Option] {
+        [
+            Option(id: UUID().uuidString, toStateId: machineStateId, combinations: Combination.samples),
+            Option(id: UUID().uuidString, toStateId: machineStateId, combinations: Combination.samples),
+            Option(id: UUID().uuidString, toStateId: machineStateId, combinations: Combination.samples)
+        ]
+    }
 }

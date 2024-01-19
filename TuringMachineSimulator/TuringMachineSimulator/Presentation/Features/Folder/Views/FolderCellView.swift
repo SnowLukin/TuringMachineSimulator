@@ -16,25 +16,27 @@ struct FolderCellView: View {
         Button {
             action()
         } label: {
-            HStack {
-                Image(systemName: "folder")
-                    .foregroundStyle(.orange)
-                    .font(.title2)
+            VStack {
+                Image(systemName: "folder.fill")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 100)
+                    .foregroundStyle(.blue)
                 Text(folder.name)
                     .lineLimit(1)
                     .foregroundStyle(.primary)
-                    .alignHorizontally(.leading)
-                Text("\(folder.algorithms.count)")
+                Text("Algorithms: \(folder.algorithms.count)")
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
-            }.contentShape(.rect)
+            }
         }.buttonStyle(.plain)
     }
 }
 
 #Preview {
     let folder = Folder(id: UUID().uuidString, name: "Test Folder", algorithms: [])
-    return List {
+    return HStack(spacing: 20) {
+        FolderCellView(folder: folder) {}
         FolderCellView(folder: folder) {}
     }
 }
