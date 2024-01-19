@@ -88,4 +88,24 @@ extension Tape {
             headIndex: 200
         )
     }
+
+    static var samples: [Tape] {
+        [
+            Tape(
+                name: "Tape 1",
+                input: "abcdefghijklmnopqrstuvwxyz",
+                headIndex: 200
+            ),
+            Tape(
+                name: "Tape 2",
+                input: "abcdefghijklmnopqrstuvwxyz",
+                headIndex: 200
+            ),
+            Tape(
+                name: "Tape 3",
+                input: "abcdefghijklmnopqrstuvwxyz",
+                headIndex: 200
+            )
+        ]
+    }
 }

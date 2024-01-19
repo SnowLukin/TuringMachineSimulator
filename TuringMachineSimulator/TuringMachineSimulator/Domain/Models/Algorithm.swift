@@ -90,4 +90,43 @@ extension Algorithm {
             states: [MachineState.sample(withId: machineStateId)]
         )
     }
+
+    static var samples: [Algorithm] {
+        let machineStateId = UUID().uuidString
+        return [
+            Algorithm(
+                id: UUID().uuidString,
+                name: "Algorithm 1",
+                algDescription: "Test",
+                createdDate: .now,
+                lastEditDate: .now,
+                startingStateId: machineStateId,
+                activeStateId: machineStateId,
+                tapes: Tape.samples,
+                states: MachineState.samples(withId: machineStateId)
+            ),
+            Algorithm(
+                id: UUID().uuidString,
+                name: "Algorithm 2",
+                algDescription: "Test",
+                createdDate: .now,
+                lastEditDate: .now,
+                startingStateId: machineStateId,
+                activeStateId: machineStateId,
+                tapes: Tape.samples,
+                states: MachineState.samples(withId: machineStateId)
+            ),
+            Algorithm(
+                id: UUID().uuidString,
+                name: "Algorithm 3",
+                algDescription: "Test",
+                createdDate: .now,
+                lastEditDate: .now,
+                startingStateId: machineStateId,
+                activeStateId: machineStateId,
+                tapes: Tape.samples,
+                states: MachineState.samples(withId: machineStateId)
+            )
+        ]
+    }
 }

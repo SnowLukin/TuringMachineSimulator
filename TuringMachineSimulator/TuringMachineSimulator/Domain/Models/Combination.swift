@@ -53,4 +53,27 @@ extension Combination {
             direction: .stay
         )
     }
+
+    static var samples: [Combination] {
+        [
+            Combination(
+                id: UUID().uuidString,
+                fromChar: "a",
+                toChar: "b",
+                direction: .left
+            ),
+            Combination(
+                id: UUID().uuidString,
+                fromChar: "a",
+                toChar: "b",
+                direction: .stay
+            ),
+            Combination(
+                id: UUID().uuidString,
+                fromChar: "a",
+                toChar: "b",
+                direction: .right
+            )
+        ]
+    }
 }
