@@ -12,7 +12,7 @@ final class FakeCombinationRepository: CombinationRepository {
 
     private var combinations: [Combination]
 
-    init(combinations: [Combination] = [Combination.sample]) {
+    init(combinations: [Combination] = Combination.samples) {
         self.combinations = combinations
     }
 

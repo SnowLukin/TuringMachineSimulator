@@ -12,7 +12,7 @@ final class FakeFolderRepository: FolderRepository {
 
     private var folders: [Folder]
 
-    init(folders: [Folder] = [Folder.sample]) {
+    init(folders: [Folder] = Folder.samples) {
         self.folders = folders
     }
 

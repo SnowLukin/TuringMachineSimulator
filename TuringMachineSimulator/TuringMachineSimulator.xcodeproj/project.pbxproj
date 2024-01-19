@@ -33,7 +33,6 @@
 		D70DC4F82B4ED06600C643E0 /* OptionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC4822B4ED06500C643E0 /* OptionScreen.swift */; };
 		D70DC4F92B4ED06600C643E0 /* OptionDestinationMachineStateScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC4832B4ED06500C643E0 /* OptionDestinationMachineStateScreen.swift */; };
 		D70DC4FA2B4ED06600C643E0 /* FolderListScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC4862B4ED06500C643E0 /* FolderListScreenViewModel.swift */; };
-		D70DC4FB2B4ED06600C643E0 /* NewFolderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC4882B4ED06500C643E0 /* NewFolderButton.swift */; };
 		D70DC4FC2B4ED06600C643E0 /* FolderCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC4892B4ED06500C643E0 /* FolderCellView.swift */; };
 		D70DC4FD2B4ED06600C643E0 /* FolderListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC48A2B4ED06500C643E0 /* FolderListScreen.swift */; };
 		D70DC4FE2B4ED06600C643E0 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DC48C2B4ED06500C643E0 /* RootView.swift */; };
@@ -132,7 +131,6 @@
 		D70DC4822B4ED06500C643E0 /* OptionScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionScreen.swift; sourceTree = "<group>"; };
 		D70DC4832B4ED06500C643E0 /* OptionDestinationMachineStateScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionDestinationMachineStateScreen.swift; sourceTree = "<group>"; };
 		D70DC4862B4ED06500C643E0 /* FolderListScreenViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderListScreenViewModel.swift; sourceTree = "<group>"; };
-		D70DC4882B4ED06500C643E0 /* NewFolderButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewFolderButton.swift; sourceTree = "<group>"; };
 		D70DC4892B4ED06500C643E0 /* FolderCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderCellView.swift; sourceTree = "<group>"; };
 		D70DC48A2B4ED06500C643E0 /* FolderListScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderListScreen.swift; sourceTree = "<group>"; };
 		D70DC48C2B4ED06500C643E0 /* RootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -368,7 +366,6 @@
 		D70DC4872B4ED06500C643E0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D70DC4882B4ED06500C643E0 /* NewFolderButton.swift */,
 				D70DC4892B4ED06500C643E0 /* FolderCellView.swift */,
 			);
 			path = Views;
@@ -844,7 +841,6 @@
 				D70DC5332B4ED06600C643E0 /* CDAlgorithm+Extension.swift in Sources */,
 				D70DC52B2B4ED06600C643E0 /* ImportError.swift in Sources */,
 				D70DC4EB2B4ED06600C643E0 /* NewAlgorithmButton.swift in Sources */,
-				D70DC4FB2B4ED06600C643E0 /* NewFolderButton.swift in Sources */,
 				D70DC4FF2B4ED06600C643E0 /* Page.swift in Sources */,
 				D70DC4E52B4ED06600C643E0 /* AlgorithmListScreenViewModel.swift in Sources */,
 				D70DC4FD2B4ED06600C643E0 /* FolderListScreen.swift in Sources */,

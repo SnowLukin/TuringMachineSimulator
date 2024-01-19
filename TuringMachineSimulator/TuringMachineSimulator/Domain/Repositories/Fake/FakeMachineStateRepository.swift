@@ -12,7 +12,7 @@ final class FakeMachineStateRepository: MachineStateRepository {
 
     private var states: [MachineState]
 
-    init(states: [MachineState] = [MachineState.sample()]) {
+    init(states: [MachineState] = MachineState.samples()) {
         self.states = states
     }
 

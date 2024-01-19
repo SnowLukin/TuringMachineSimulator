@@ -38,7 +38,9 @@ final class FolderListScreenViewModel: ObservableObject {
             let name = name.isEmpty ? "New Folder" : name
             let folder = Folder(id: UUID().uuidString, name: name, algorithms: [])
             try folderRepository.save(folder)
-            fetchFolders()
+            withAnimation {
+                fetchFolders()
+            }
         } catch {
             AppLogger.error(error.localizedDescription)
         }
