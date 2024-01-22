@@ -36,8 +36,8 @@ extension Folder {
 
     static var samples: [Folder] {
         [
-            Folder(id: UUID().uuidString, name: "Folder 1", algorithms: Algorithm.samples),
-            Folder(id: UUID().uuidString, name: "Folder 2", algorithms: Algorithm.samples),
+            Folder(id: UUID().uuidString, name: "My class", algorithms: Algorithm.samples),
+            Folder(id: UUID().uuidString, name: "Test", algorithms: Algorithm.samples),
             Folder(id: UUID().uuidString, name: "Folder 3", algorithms: Algorithm.samples),
             Folder(id: UUID().uuidString, name: "Folder 4", algorithms: Algorithm.samples),
             Folder(id: UUID().uuidString, name: "Folder 5", algorithms: Algorithm.samples),

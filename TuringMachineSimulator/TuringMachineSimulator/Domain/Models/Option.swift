@@ -48,9 +48,26 @@ extension Option {
 
     static func samples(machineStateId: String = "") -> [Option] {
         [
-            Option(id: UUID().uuidString, toStateId: machineStateId, combinations: Combination.samples),
-            Option(id: UUID().uuidString, toStateId: machineStateId, combinations: Combination.samples),
-            Option(id: UUID().uuidString, toStateId: machineStateId, combinations: Combination.samples)
+            Option(id: UUID().uuidString, toStateId: machineStateId, combinations: [
+                Combination(id: UUID().uuidString, fromChar: "a", toChar: "f", direction: .right),
+                Combination(id: UUID().uuidString, fromChar: "b", toChar: "f", direction: .right),
+                Combination(id: UUID().uuidString, fromChar: "c", toChar: "f", direction: .right)
+            ]),
+            Option(id: UUID().uuidString, toStateId: machineStateId, combinations: [
+                Combination(id: UUID().uuidString, fromChar: "b", toChar: "f", direction: .right),
+                Combination(id: UUID().uuidString, fromChar: "b", toChar: "f", direction: .right),
+                Combination(id: UUID().uuidString, fromChar: "c", toChar: "f", direction: .right)
+            ]),
+            Option(id: UUID().uuidString, toStateId: machineStateId, combinations: [
+                Combination(id: UUID().uuidString, fromChar: "c", toChar: "f", direction: .right),
+                Combination(id: UUID().uuidString, fromChar: "b", toChar: "f", direction: .right),
+                Combination(id: UUID().uuidString, fromChar: "c", toChar: "f", direction: .right)
+            ]),
+            Option(id: UUID().uuidString, toStateId: machineStateId, combinations: [
+                Combination(id: UUID().uuidString, fromChar: "d", toChar: "f", direction: .right),
+                Combination(id: UUID().uuidString, fromChar: "b", toChar: "f", direction: .right),
+                Combination(id: UUID().uuidString, fromChar: "c", toChar: "f", direction: .right)
+            ])
         ]
     }
 }

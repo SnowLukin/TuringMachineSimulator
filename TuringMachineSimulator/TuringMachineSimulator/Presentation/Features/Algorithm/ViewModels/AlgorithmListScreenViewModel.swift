@@ -18,7 +18,9 @@ final class AlgorithmListScreenViewModel: ObservableObject {
     var filteredAlgorithms: [Algorithm] {
         searchText.isEmpty
         ? algorithms
-        : algorithms.filter { $0.name.contains(searchText) }
+        : algorithms
+            .filter { $0.name.contains(searchText) }
+            .sorted { $0.lastEditDate > $1.lastEditDate }
     }
 
     private let repository: AlgorithmRepository
@@ -45,7 +47,9 @@ final class AlgorithmListScreenViewModel: ObservableObject {
         let algorithm = Algorithm(name: name)
         do {
             try repository.save(algorithm: algorithm, folder: folder)
-            fetchAlgorithms()
+            withAnimation {
+                fetchAlgorithms()
+            }
         } catch {
             AppLogger.error(error.localizedDescription)
         }
@@ -54,7 +58,9 @@ final class AlgorithmListScreenViewModel: ObservableObject {
     func deleteAlgorithm(_ algorithm: Algorithm) {
         do {
             try repository.delete(algorithm: algorithm)
-            fetchAlgorithms()
+            withAnimation {
+                fetchAlgorithms()
+            }
         } catch {
             AppLogger.error(error.localizedDescription)
         }

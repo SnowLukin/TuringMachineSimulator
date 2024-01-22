@@ -93,17 +93,17 @@ extension Tape {
         [
             Tape(
                 name: "Tape 1",
-                input: "abcdefghijklmnopqrstuvwxyz",
+                input: "abcd",
                 headIndex: 200
             ),
             Tape(
                 name: "Tape 2",
-                input: "abcdefghijklmnopqrstuvwxyz",
+                input: "bbbb",
                 headIndex: 200
             ),
             Tape(
                 name: "Tape 3",
-                input: "abcdefghijklmnopqrstuvwxyz",
+                input: "cccc",
                 headIndex: 200
             )
         ]

@@ -31,14 +31,16 @@ struct AlgorithmListScreen: View {
                     AlgorithmCellView(algorithm: algorithm) {
                         coordinator.push(.algorithm(algorithm))
                     }
-                }.onDelete { indexSet in
+                }
+                .onDelete { indexSet in
                     withAnimation {
                         indexSet
                             .map { viewModel.filteredAlgorithms[$0] }
                             .forEach { viewModel.deleteAlgorithm($0) }
                     }
                 }
-            }
+                .animation(.default, value: viewModel.filteredAlgorithms)
+            }.animation(.default, value: viewModel.filteredAlgorithms)
             .searchable(text: $viewModel.searchText)
             .opacity(viewModel.algorithms.isEmpty ? 0 : 1)
             .toolbar {
