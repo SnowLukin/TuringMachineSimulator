@@ -35,7 +35,9 @@ final class AlgorithmListScreenViewModel: ObservableObject {
     func fetchAlgorithms() {
         Task { @MainActor in
             do {
-                algorithms = try await repository.getAlgorithms(folderId: folder.id)
+                algorithms = try await repository.getAlgorithms(folderId: folder.id).sorted {
+                    $0.lastEditDate > $1.lastEditDate
+                }
             } catch {
                 AppLogger.error(error.localizedDescription)
             }
